@@ -297,3 +297,156 @@ main {
     padding-inline: 1.25rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ABOUT SECTION */
+.about {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #31231e, #241814);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1.2;
+}
+
+.about-text h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-text p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 34rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-photo {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-card {
+  width: 220px;
+  height: 260px;
+  border-radius: 26px;
+  background: radial-gradient(circle at top, #84714f, #160f0c);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo-card img {
+  width: 88%;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+/* CONTACT SECTION */
+.contact {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #241814, #160f0c);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.contact-left {
+  flex: 1.2;
+}
+
+.contact-left h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-left p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 28rem;
+  margin-bottom: 1.4rem;
+}
+
+.contact-form .field {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(244, 247, 190, 0.18);
+  background: rgba(9, 6, 5, 0.9);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid var(--accent);
+}
+
+.contact-photo {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-photo-card {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #91aec1, #241814);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-photo-card img {
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE STACKING */
+@media (max-width: 830px) {
+  .about,
+  .contact {
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem 1.8rem;
+  }
+
+  .about-photo,
+  .contact-photo {
+    order: -1;
+  }
+}
