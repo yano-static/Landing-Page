@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yano · Archive</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header class="site-header">
@@ -19,7 +19,6 @@
   </header>
 
   <main>
-    <!-- HOME / HERO -->
     <section id="home" class="hero">
       <div class="hero-text">
         <p class="eyebrow">Hey, I am Yano</p>
@@ -27,8 +26,7 @@
           I write about
           <span>My experiences with Burnout and life choices</span>
         </h1>
-        <p class="subtitle">
-          This is a Landing page for my Writings, A safe space for my thoughts.
+        <p class="subtitle"> This is a Landing page for my Writings, A safe space for my thoughts.
         </p>
         <a href="#blogs" class="btn-primary">Blog Collection</a>
       </div>
@@ -40,15 +38,14 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="about">
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          My name is Vincent Palanas, I play volleyball and make music. I write songs about my experience, as well as making blogs to let out my creative juice. I study at the University of the East since 7th grade.
+My name is Vincent Palanas, I play volleyball and make music. I write songs about my experience, as well as making blogs to let out my creative juice. I study at the University of the East since 7th grade.
         </p>
         <p>
-          I play all positions except Libero, and Play every instrument except for the drums. I aspire to be a Software or Game Developer, and make enough money to provide and travel the world.
+I play all positions except Libero, and Play every instrument except for the drums. I aspire to be a Software or Game Developer, and make enough money to provide and travel the world.
         </p>
       </div>
 
@@ -59,37 +56,39 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <div class="contact-left">
-        <h2>Contact</h2>
-        <p>
-          Got feedback, questions, or just want to say hi? You can reach me through
-          any of the details below.
-        </p>
+ <!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-left">
+    <h2>Contact</h2>
+    <p>
+      Got feedback, questions, or just want to say hi? You can reach me through
+      any of the details below.
+    </p>
 
-        <div class="contact-info">
-          <p><strong>Facebook Name:</strong> Vincent Palanas</p>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:yanopalanas@gmail.com">yanopalanas@gmail.com</a>
-          </p>
-          <p><strong>Phone:</strong> 09936545366</p>
-        </div>
-      </div>
+    <div class="contact-info">
+      <p><strong>Facebook Name:</strong> Vincent Palanas</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:yanopalanas@gmail.com">yanopalanas@gmail.com</a>
+      </p>
+      <p><strong>Phone:</strong> 09936545366</p>
+    </div>
+  </div>
 
-      <div class="contact-photo">
-        <div class="contact-photo-card">
-          <img src="contact-photo.jpg" alt="Notebook, laptop, or coffee" />
-        </div>
-      </div>
-    </section>
+  <!-- Contact photo placeholder -->
+  <div class="contact-photo">
+    <div class="contact-photo-card">
+      <img src="contact-photo.jpg" alt="Notebook, laptop, or coffee" />
+    </div>
+  </div>
+</section>
 
-    <!-- BLOGS LIST -->
+
+    <!-- BLOGS -->
     <section id="blogs" class="blogs">
       <h2>My Blogs</h2>
       <p class="blogs-subtitle">
-        These are the main posts from this hub. Click a card to read it here on the page.
+        These are the main posts from this hub. Each card opens a separate page.
       </p>
 
       <div class="blog-grid">
@@ -97,6 +96,7 @@
         <a
           class="blog-card"
           href="https://yano-static.github.io/jack-of-no-trades/"
+          target="_blank"
           rel="noopener"
         >
           <div class="blog-tag blog-tag-latest">About me</div>
@@ -110,6 +110,7 @@
         <a
           class="blog-card"
           href="https://yano-static.github.io/BLOG-2/"
+          target="_blank"
           rel="noopener"
         >
           <div class="blog-tag blog-tag-soon">Motivation</div>
@@ -123,6 +124,7 @@
         <a
           class="blog-card"
           href="https://yano-static.github.io/BLOG-3/"
+          target="_blank"
           rel="noopener"
         >
           <div class="blog-tag blog-tag-wip">Career Choices</div>
@@ -133,55 +135,11 @@
         </a>
       </div>
     </section>
-
-    <!-- EMBEDDED BLOG VIEWER -->
-    <section id="blog-viewer" class="blog-viewer" style="display: none;">
-      <div class="blog-viewer-header">
-        <button id="close-blog" class="btn-secondary">← Back to blog list</button>
-      </div>
-      <div class="blog-viewer-frame-wrapper">
-        <iframe
-          id="blog-frame"
-          src=""
-          frameborder="0"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 Yano · Blog Hub</p>
   </footer>
-
-  <!-- SCRIPT FOR OPTION 2 BEHAVIOR -->
-  <script>
-    const blogFrame = document.getElementById('blog-frame');
-    const blogViewer = document.getElementById('blog-viewer');
-    const blogsSection = document.getElementById('blogs');
-    const closeBtn = document.getElementById('close-blog');
-
-    // When a blog card is clicked, load it in the iframe instead of navigating
-    document.querySelectorAll('.blog-card').forEach(card => {
-      card.addEventListener('click', function (e) {
-        e.preventDefault(); // stop normal link behavior
-        const url = this.getAttribute('href');
-        blogFrame.src = url;
-        blogViewer.style.display = 'block';
-        blogsSection.style.display = 'none';
-
-        // Optional: Scroll to the top of the viewer
-        blogViewer.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // Back button: hide iframe and show blog list again
-    closeBtn.addEventListener('click', () => {
-      blogViewer.style.display = 'none';
-      blogsSection.style.display = 'block';
-      blogFrame.src = ''; // clear loaded page
-      blogsSection.scrollIntoView({ behavior: 'smooth' });
-    });
-  </script>
 </body>
+
 </html>
