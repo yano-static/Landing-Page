@@ -4,23 +4,18 @@
   --col-brown: #5a3a31;
   --col-dark: #31231e;
   --accent: #9FA88A;
-
   --bg-main: var(--col-dark);
   --bg-card: var(--col-brown);
   --bg-soft: var(--col-light);
-  --accent: var(--col-blue);
   --accent-alt: var(--col-olive);
-
   --text-main: var(--col-light);
   --text-muted: #d1c9b4;
-
   --radius-lg: 32px;
   --radius-md: 20px;
   --radius-pill: 999px;
   --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
-/* reset-ish */
 *,
 *::before,
 *::after {
@@ -31,20 +26,17 @@
 
 body {
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background: radial-gradient(circle at top, #3f2c24, #160f0c);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #160f0c;
   color: var(--text-main);
 }
 
-/* Layout wrappers */
 main {
   max-width: 1120px;
   margin: 0 auto;
   padding: 1.5rem 1.5rem 3rem;
 }
 
-/* Header */
 .site-header {
   max-width: 1120px;
   margin: 0 auto;
@@ -87,13 +79,12 @@ main {
   width: 100%;
 }
 
-/* Hero section */
 .hero {
   min-height: 70vh;
   margin-top: 1.5rem;
   padding: 2.5rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #5a3a31 0%, #31231e 55%, #241814 100%);
+  background-color: var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,13 +126,12 @@ main {
   padding: 0.9rem 1.8rem;
   border-radius: var(--radius-pill);
   background: var(--accent);
-  color: #9FA88A;
+  color: var(--col-dark);
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
-  transition: transform 0.12s ease, box-shadow 0.12s ease,
-    background 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .btn-primary:hover {
@@ -150,7 +140,6 @@ main {
   background: #a6c3d6;
 }
 
-/* Photo card */
 .hero-photo {
   flex: 1;
   display: flex;
@@ -161,7 +150,7 @@ main {
   width: 260px;
   height: 320px;
   border-radius: var(--radius-lg);
-  background: radial-gradient(circle at top, #9FA88A, #31231e);
+  background-color: var(--col-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,7 +175,6 @@ main {
   object-fit: cover;
 }
 
-/* Blogs section */
 .blogs {
   margin-top: 3.5rem;
 }
@@ -216,8 +204,7 @@ main {
   border: 1px solid rgba(244, 247, 190, 0.12);
   text-decoration: none;
   color: var(--text-main);
-  transition: transform 0.12s ease, box-shadow 0.12s ease,
-    border-color 0.12s ease, background 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease;
 }
 
 .blog-card:hover {
@@ -237,7 +224,6 @@ main {
   color: var(--text-muted);
 }
 
-/* Blog tags */
 .blog-tag {
   display: inline-block;
   padding: 0.15rem 0.6rem;
@@ -263,7 +249,6 @@ main {
   color: #f3e7ce;
 }
 
-/* Footer */
 .site-footer {
   max-width: 1120px;
   margin: 0 auto;
@@ -272,42 +257,15 @@ main {
   font-size: 0.85rem;
 }
 
-/* Responsive */
-@media (max-width: 830px) {
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 2rem 1.8rem;
-  }
-
-  .hero-text {
-    align-items: center;
-  }
-
-  .subtitle {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .site-header {
-    padding-inline: 1.25rem;
-  }
-
-  main {
-    padding-inline: 1.25rem;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-/* ABOUT SECTION */
 .about {
   margin-top: 3.5rem;
   padding: 2.5rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #31231e, #241814);
+  background-color: var(--col-dark);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -340,7 +298,7 @@ html {
   width: 220px;
   height: 260px;
   border-radius: 26px;
-  background: radial-gradient(circle at top, #84714f, #160f0c);
+  background-color: var(--col-olive);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   display: flex;
@@ -354,12 +312,11 @@ html {
   object-fit: cover;
 }
 
-/* CONTACT SECTION */
 .contact {
   margin-top: 3.5rem;
   padding: 2.5rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #241814, #160f0c);
+  background-color: #241814;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -421,7 +378,7 @@ html {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle at top, #9FA88A, #241814);
+  background-color: var(--col-dark);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   display: flex;
@@ -436,15 +393,25 @@ html {
   object-fit: cover;
 }
 
-/* RESPONSIVE STACKING */
 @media (max-width: 830px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem 1.8rem;
+  }
+  .hero-text {
+    align-items: center;
+  }
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .about,
   .contact {
     flex-direction: column;
     text-align: left;
     padding: 2rem 1.8rem;
   }
-
   .about-photo,
   .contact-photo {
     order: -1;
