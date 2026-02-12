@@ -60,7 +60,8 @@ img {
   justify-content: space-between;
 }
 
-.logo, .site-title {
+.logo,
+.site-title {
   font-family: "Lora", serif;
   font-size: 2.1rem;
   font-weight: 700;
@@ -69,7 +70,9 @@ img {
   text-decoration: none;
 }
 
-.logo span { color: var(--accent); }
+.logo span {
+  color: var(--accent);
+}
 
 .nav a {
   margin-left: 1.5rem;
@@ -80,7 +83,9 @@ img {
   transition: color 0.2s;
 }
 
-.nav a:hover { color: var(--accent); }
+.nav a:hover {
+  color: var(--accent);
+}
 
 .site-footer {
   max-width: 1120px;
@@ -233,14 +238,16 @@ main {
 }
 
 /* === 7. UTILITIES & CONTACT === */
-.photo-card, .about-photo-card {
+.photo-card,
+.about-photo-card {
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 4px solid var(--col-dark);
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 0.8rem;
   background: var(--bg-main);
@@ -252,20 +259,25 @@ main {
 
 /* === 8. RESPONSIVENESS === */
 @media (max-width: 830px) {
-  .hero, .about, .contact {
+  .hero,
+  .about,
+  .contact {
     flex-direction: column-reverse;
     text-align: center;
     padding: 2rem;
   }
-  
+
   .site-header {
     flex-direction: column;
     gap: 1rem;
   }
 
-  .nav a { margin: 0 0.75rem; }
+  .nav a {
+    margin: 0 0.75rem;
+  }
 
-  .post, .bio-page {
+  .post,
+  .bio-page {
     padding: 2rem 1.5rem;
   }
 
