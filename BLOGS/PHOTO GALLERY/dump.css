@@ -105,12 +105,13 @@ h1 {
 
 .sub-title {
   font-family: "Inter", "Helvetica Neue", sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--taupe);
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
 }
+
 
 /* GALLERY GRID */
 .gallery-grid {
