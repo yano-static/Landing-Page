@@ -436,3 +436,11 @@ main {
   color: var(--col-light);
 }
 
+/* Photo gallery sizing */
+.gallery-grid img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
