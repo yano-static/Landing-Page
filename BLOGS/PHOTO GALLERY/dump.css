@@ -116,11 +116,12 @@ h1 {
 .gallery-grid {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(110px, 140px); /* larger square width */
+  grid-auto-columns: minmax(130px, 170px);
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 6px;
 }
+
 
 /* Optional: scrollbar styling */
 .gallery-grid::-webkit-scrollbar {
