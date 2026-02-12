@@ -115,17 +115,22 @@ h1 {
 /* GALLERY GRID */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(80px, 100px); /* square width */
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
 }
+
 
 .photo-link {
   display: block;
   position: relative;
   overflow: hidden;
   background: var(--deep-brown);
-  border-radius: 12px;
-  border: 1px solid rgba(244, 247, 190, 0.08);
+  border-radius: 10px;
+  border: 1px solid rgba(244, 247, 190, 0.12);
+  aspect-ratio: 1 / 1;
 }
 
 .photo-link img {
