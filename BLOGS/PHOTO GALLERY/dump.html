@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yano · Archive Gallery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../style.css">
+  <meta charset="UTF-8" />
+  <title>Yano · Photo Dump</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="dump.css" />
 </head>
 <body id="top">
 
-  <header class="site-header">
-    <div class="logo">Yano · <span>Archive</span></div>
-    <nav class="nav">
-      <a href="https://yano-static.github.io/Landing-Page/">Home</a>
-      <a href="#time-capsule">Time Capsule</a>
-      <a href="#passion">Passion</a>
-      <a href="#people">People</a>
+  <header>
+    <h1>Photo<br>Dump</h1>
+    <p class="header-subtitle">
+      A quiet archive of snapshots from different seasons of my life — time capsule, passions,
+      and the people who stayed in frame.
+    </p>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#time-capsule">Time Capsule</a></li>
+        <li class="nav-item"><a href="#passion">Passion</a></li>
+        <li class="nav-item"><a href="#people">People</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="bio-page">
-    <h1 class="bio-title">Photo Dump</h1>
-    <p class="bio-content">
-      A quiet archive of snapshots from different seasons of my life — childhood, teenage years,
-      college, passions, and the people who stayed in frame.
-    </p>
-
+  <main class="container">
     <!-- TIME CAPSULE -->
-    <section id="time-capsule">
+    <section id="time-capsule" class="section-block">
       <h2 class="section-title">Time Capsule</h2>
 
       <h3 class="sub-title">Childhood</h3>
@@ -61,7 +60,7 @@
     </section>
 
     <!-- PASSION -->
-    <section id="passion">
+    <section id="passion" class="section-block">
       <h2 class="section-title">Passion</h2>
 
       <h3 class="sub-title">Sports</h3>
@@ -104,7 +103,7 @@
     </section>
 
     <!-- PEOPLE -->
-    <section id="people">
+    <section id="people" class="section-block">
       <h2 class="section-title">People</h2>
 
       <h3 class="sub-title">Friends</h3>
@@ -164,15 +163,14 @@
         </a>
       </div>
     </section>
-
-    <!-- NAVIGATION -->
-    <section class="post-nav">
-      <a href="#top" class="post-nav-link">Back to top</a>
-      <a href="https://yano-static.github.io/Landing-Page/" class="post-nav-link">
-        Back to landing page
-      </a>
-    </section>
   </main>
+
+  <footer class="footer-nav">
+    <a href="#top" class="top-link">↑ Back to top</a>
+    <a href="https://yano-static.github.io/Landing-Page/" class="back-to-landing">
+      Back to landing page
+    </a>
+  </footer>
 
 </body>
 </html>
