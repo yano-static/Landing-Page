@@ -224,6 +224,16 @@ main {
   font-size: 0.95rem;
 }
 
+/* Contact email link */
+.contact-info a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  color: var(--col-light);
+}
+
 /* === 5. BIOGRAPHY STYLES (Integrated) === */
 .bio-page {
   max-width: 900px;
