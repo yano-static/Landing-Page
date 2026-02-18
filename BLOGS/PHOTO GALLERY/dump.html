@@ -111,11 +111,10 @@
         <a href="friend1.jpg" class="photo-link">
           <img src="friend1.jpg" alt="Friends 1">
         </a>
-        <a href="friend2.jpg" class="photo-link" target="phototab">
-          
+        <a href="friend2.jpg" class="photo-link">
           <img src="friend2.jpg" alt="Friends 2">
         </a>
-        <a href="friend3.jpg" class="photo-link" target="phototab">
+        <a href="friend3.jpg" class="photo-link">
           <img src="friend3.jpg" alt="Friends 3">
         </a>
         <a href="friend4.jpg" class="photo-link">
@@ -172,6 +171,15 @@
       Back to landing page
     </a>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".photo-link");
+      links.forEach(link => {
+        link.setAttribute("target", "phototab");
+      });
+    });
+  </script>
 
 </body>
 </html>
