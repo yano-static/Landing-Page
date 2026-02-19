@@ -6,6 +6,65 @@
     <title>MEDIA · YANO</title>
     <link rel="stylesheet" href="media.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .media-hub {
+            padding: 2rem 0 5rem;
+        }
+        
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hub-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(244, 247, 190, 0.05);
+            border-radius: var(--radius-md);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            background: rgba(159, 168, 138, 0.05);
+        }
+
+        .hub-icon {
+            width: 60px;
+            height: 60px;
+            color: var(--accent);
+            transition: transform 0.4s ease;
+        }
+
+        .hub-card:hover .hub-icon {
+            transform: scale(1.1);
+            color: var(--col-light);
+        }
+
+        .hub-card span {
+            font-family: "Lora", serif;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+
+        .hub-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body id="top">
     <header class="site-header">
@@ -20,24 +79,34 @@
     </header>
 
     <main class="media-container">
+        <section class="category-hero">
+            <p class="eyebrow">The Collection</p>
+            <h1 class="huge-title">Archive</h1>
+            <div class="header-line"></div>
+            <p class="hub-description">
+                A digital library of my favorite Beats, Films, and TV Shows that have shaped my perspective with different morals and ideals. Explore the archives below.
+            </p>
+        </section>
+
         <section class="media-hub">
-            <h1>Liked Medias</h1>
             <div class="hub-grid">
                 <a href="beats.html" class="hub-card">
                     <div class="hub-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
                     </div>
                     <span>Beats</span>
                 </a>
+
                 <a href="films.html" class="hub-card">
                     <div class="hub-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
                     </div>
                     <span>Films</span>
                 </a>
+
                 <a href="tvshows.html" class="hub-card">
                     <div class="hub-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
                     </div>
                     <span>TV Shows</span>
                 </a>
