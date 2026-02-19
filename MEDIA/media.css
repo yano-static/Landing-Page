@@ -8,7 +8,7 @@
   --accent: #9FA88A;
   --accent-blue: #91aec1;
   --bg-main: var(--col-deep);
-  --bg-card: #3b2922;
+  --bg-card: #231916; /* Refined coffee tone */
   --bg-dark-card: rgba(28, 19, 16, 0.95);
   --text-main: var(--col-light);
   --text-muted: #d1c9b4;
@@ -44,25 +44,12 @@ body {
 .nav a { margin-left: 1.5rem; font-size: 0.9rem; text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
 .nav a:hover { color: var(--accent); }
 
-/* === 4. MEDIA HUB (The Selection Cards) === */
-.media-hub {
-  padding: 4rem 0;
-  text-align: center;
-}
-.media-hub h1 {
-  font-family: "Lora", serif;
-  font-size: 4rem;
-  margin-bottom: 3rem;
-  color: var(--text-main);
-}
-.hub-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+/* === 4. MEDIA HUB (Choices Page) === */
+.media-hub { padding: 4rem 0; text-align: center; }
+.media-hub h1 { font-family: "Lora", serif; font-size: 4rem; margin-bottom: 3rem; }
+.hub-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
 .hub-card {
-  background: var(--bg-card);
+  background: #3b2922;
   width: 220px;
   height: 220px;
   border-radius: var(--radius-md);
@@ -75,101 +62,80 @@ body {
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(244, 247, 190, 0.05);
 }
-.hub-card:hover {
-  transform: translateY(-10px);
-  background: var(--bg-dark-card);
-  border-color: var(--accent);
-}
-.hub-icon {
-  width: 70px;
-  height: 70px;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-.hub-card span {
-  font-weight: 600;
-  font-size: 1.2rem;
+.hub-card:hover { transform: translateY(-10px); background: var(--bg-dark-card); border-color: var(--accent); }
+.hub-icon { width: 70px; height: 70px; color: var(--accent); margin-bottom: 1rem; }
+.hub-card span { font-weight: 600; font-size: 1.2rem; color: var(--text-main); }
+
+/* === 5. CATEGORY HERO (Beats/Films Title) === */
+.category-hero { text-align: center; padding: 6rem 0 4rem; }
+.huge-title {
+  font-family: "Lora", serif;
+  font-size: 8rem; 
   color: var(--text-main);
+  letter-spacing: -3px;
+  margin: 0;
+  line-height: 1;
 }
+.header-line { width: 60px; height: 3px; background: var(--accent); margin: 2rem auto 0; }
 
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--col-olive), transparent);
-  margin: 4rem 0;
-}
-
-/* === 5. MEDIA GRID & CARDS === */
+/* === 6. MEDIA GRID & CARDS === */
 .media-container { max-width: 1120px; margin: 0 auto; padding: 1.5rem; }
-.category-block { padding: 4rem 0; }
-.category-header { margin-bottom: 3rem; border-bottom: 2px solid var(--col-olive); padding-bottom: 1rem; }
-.category-header h2 { font-family: "Lora", serif; font-size: 2.5rem; color: var(--accent); }
 .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
 
 .media-card {
-  background: var(--bg-dark-card);
-  border: 1px solid rgba(244, 247, 190, 0.1);
-  border-radius: var(--radius-md);
-  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(244, 247, 190, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
   position: relative;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-soft);
 }
-.media-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); }
+.media-card:hover { transform: translateY(-12px) scale(1.02); border-color: var(--accent); }
 
 .media-rank {
   position: absolute;
-  top: -12px;
-  right: 25px;
+  top: -10px;
+  right: 20px;
   background: var(--accent);
-  color: var(--col-deep);
+  color: #160f0c;
   font-weight: 800;
-  font-size: 0.75rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
   z-index: 10;
 }
 
-/* Visual Embed Fixes */
+/* Smart Visual Container (Adapts to Beats or Films) */
 .media-visual {
   width: 100%;
-  height: 350px; /* Fixed height for consistency */
-  border-radius: var(--radius-sm);
+  min-height: 152px; /* For Beats */
+  border-radius: 8px;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  border: 1px solid rgba(244, 247, 190, 0.1);
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.media-visual iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+/* If the card is in a Films section, make the visual taller */
+#films-section .media-visual, 
+.films-page .media-visual {
+  height: 350px; 
 }
 
-/* TikTok Embed Adjustment */
-.tiktok-embed {
-  margin: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
+.media-visual iframe, 
+.media-visual blockquote { width: 100% !important; height: 100% !important; border: none; }
 
 .blog-tag {
-  display: inline-block;
-  background: rgba(159, 168, 138, 0.15);
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: 1rem;
-  width: fit-content;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  font-weight: 400;
 }
 
 .media-card h3 { font-family: "Lora", serif; font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.5rem; }
@@ -179,7 +145,7 @@ body {
 .synopsis { display: block; margin-top: 1rem; font-style: italic; font-size: 0.85rem; border-left: 2px solid var(--col-olive); padding-left: 0.75rem; }
 .media-rating { color: var(--accent-blue); font-size: 1.2rem; letter-spacing: 4px; padding-top: 1rem; border-top: 1px solid rgba(244, 247, 190, 0.05); }
 
-/* === 6. FLOATING BTN & FOOTER === */
+/* === 7. FLOATING BTN & FOOTER === */
 .float-btn {
   position: fixed;
   bottom: 2rem;
@@ -187,7 +153,7 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius-pill);
   background: var(--accent);
-  color: var(--col-deep) !important;
+  color: #160f0c !important;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -200,79 +166,11 @@ body {
 .float-btn:hover { background: var(--accent-blue); transform: translateY(-5px); }
 .site-footer { text-align: center; padding: 4rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
 .btn-secondary { display: inline-block; padding: 0.9rem 1.8rem; border-radius: var(--radius-pill); border: 1px solid var(--accent); color: var(--accent); text-decoration: none; transition: 0.3s; }
-.btn-secondary:hover { background: var(--accent); color: var(--col-deep); }
+.btn-secondary:hover { background: var(--accent); color: #160f0c; }
 
+/* === 8. RESPONSIVENESS === */
 @media (max-width: 768px) {
+  .huge-title { font-size: 4rem; }
   .media-grid { grid-template-columns: 1fr; }
-  .media-hub h1 { font-size: 2.5rem; }
-  .media-visual { height: 250px; }
-}
-
-/* === CENTERED HERO HEADER === */
-.category-hero {
-    text-align: center;
-    padding: 5rem 0 4rem;
-}
-
-.huge-title {
-    font-family: "Lora", serif;
-    font-size: 6rem; /* Very large emphasized text */
-    color: var(--text-main);
-    letter-spacing: -2px;
-    margin: 0.5rem 0;
-}
-
-.header-line {
-    width: 60px;
-    height: 3px;
-    background: var(--accent);
-    margin: 0 auto;
-}
-
-/* === REFINED CARD LOOK (Based on Screenshot) === */
-.media-card {
-    background: #231916; /* Darker coffee-tone card */
-    border: 1px solid rgba(244, 247, 190, 0.05);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.media-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: var(--accent);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-
-/* Tag style from your screenshot */
-.blog-tag {
-    background: transparent;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    border: none;
-    padding: 0;
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
-}
-
-/* Smooth Spotify Embed */
-.media-visual {
-    background: #121212;
-    height: 152px;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-/* Fixed the Rank label to match the screenshot badge style */
-.media-rank {
-    background: #9FA88A;
-    color: #160f0c;
-    border-radius: 4px;
-    padding: 2px 8px;
-    font-size: 0.7rem;
-    top: -10px;
-}
-
-@media (max-width: 768px) {
-    .huge-title { font-size: 3.5rem; }
+  .media-visual { height: 152px !important; } /* Standard for mobile */
 }
