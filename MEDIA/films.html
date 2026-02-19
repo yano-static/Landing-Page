@@ -6,60 +6,6 @@
     <title>FILMS · YANO</title>
     <link rel="stylesheet" href="media.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Restoring the Horizontal Row Aesthetic */
-        .film-list-horizontal {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-            margin-top: 3rem;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .film-row {
-            display: flex;
-            gap: 3rem;
-            align-items: flex-start;
-            padding-bottom: 4rem;
-            border-bottom: 1px solid rgba(244, 247, 190, 0.1);
-        }
-
-        .film-row:last-child {
-            border-bottom: none;
-        }
-
-        .film-video-container {
-            flex: 1.4; 
-            aspect-ratio: 16 / 9;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .film-video-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .film-info {
-            flex: 1;
-        }
-
-        /* Responsive stack for tablets/phones */
-        @media (max-width: 900px) {
-            .film-row {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .film-video-container {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body id="top">
@@ -87,160 +33,169 @@
             <p class="eyebrow">Visual Stories</p>
             <h1 class="huge-title">Films</h1>
             <div class="header-line"></div>
+            <p class="hero-description">
+                A curated selection of cinema that resonates with the themes of grit, passion, and the human spirit. 
+                From the high-stakes world of sports to the quiet intensity of historical drama, these films 
+                represent the "Visual Stories" that have left a lasting impact on my creative perspective.
+            </p>
         </section>
 
         <div class="film-list-horizontal">
 
             <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/J1ikcAmR0ow" title="100 Meters" allowfullscreen></iframe>
-                </div>
-                <div class="film-info">
-                    <span class="media-rank">RANK #1</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BOTYyNWZiNTktNzhiYi00YWVmLWJhZTctZTc4MDRkZGMyZjVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BOTYyNWZiNTktNzhiYi00YWVmLWJhZTctZTc4MDRkZGMyZjVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="mini-poster" alt="100 Meters Poster">
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/J1ikcAmR0ow" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://m.media-amazon.com/images/M/MV5BOTYyNWZiNTktNzhiYi00YWVmLWJhZTctZTc4MDRkZGMyZjVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="photo-link" target="phototab">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTYyNWZiNTktNzhiYi00YWVmLWJhZTctZTc4MDRkZGMyZjVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="100 Meters">
                             <span class="hover-text">View Art</span>
                         </a>
-                        <div>
-                            <h3>100 Meters</h3>
-                            <div class="blog-tag">Sports Anime</div>
-                        </div>
                     </div>
-                    <p class="synopsis">A prodigy of the 100-meter dash meets a rival who pushes him to face defeat and grow as a runner. Absolute peak.</p>
+                </div>
+                <div class="film-info-content">
+                    <span class="media-rank">RANK #1</span>
+                    <div class="film-category">Sports Anime</div>
+                    <h2 class="film-title">100 Meters</h2>
+                    <p class="film-synopsis">A prodigy of the 100-meter dash meets a rival who pushes him to face defeat and grow as a runner. Absolute peak performance.</p>
                     <div class="media-details">
                         <p><strong>Director:</strong> Kenji Iwaisawa</p>
                         <p><strong>Starring:</strong> Togashi, Komiya</p>
                     </div>
-                    <div class="media-rating">★★★★★</div>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
 
             <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/Oyl40PC-dQ8" title="Hustle" allowfullscreen></iframe>
-                </div>
-                <div class="film-info">
-                    <span class="media-rank">RANK #2</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BZWYwN2Y5OWMtZjZkNC00N2Q5LWFlYzEtNzA1NTM2ZDJlZDRhXkEyXkFqcGc@._V1_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BZWYwN2Y5OWMtZjZkNC00N2Q5LWFlYzEtNzA1NTM2ZDJlZDRhXkEyXkFqcGc@._V1_.jpg" class="mini-poster" alt="Hustle Poster">
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/Oyl40PC-dQ8" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://m.media-amazon.com/images/M/MV5BMzA4ODRlMjktMDEyNS00NTg5LWEwYTAtNTExODI1ZDE2ZmYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="photo-link" target="phototab">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMzA4ODRlMjktMDEyNS00NTg5LWEwYTAtNTExODI1ZDE2ZmYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Hustle">
                             <span class="hover-text">View Art</span>
                         </a>
-                        <div>
-                            <h3>Hustle</h3>
-                            <div class="blog-tag">Sports Drama</div>
-                        </div>
                     </div>
-                    <p class="synopsis">A burned-out NBA scout finds purpose again when he discovers a raw player overseas and fights league politics.</p>
+                </div>
+                <div class="film-info-content">
+                    <span class="media-rank">RANK #2</span>
+                    <div class="film-category">Sports Drama</div>
+                    <h2 class="film-title">Hustle</h2>
+                    <p class="film-synopsis">A burned-out NBA scout finds purpose again when he discovers a raw player overseas and fights the league politics.</p>
                     <div class="media-details">
                         <p><strong>Director:</strong> Jeremiah Zagar</p>
                         <p><strong>Starring:</strong> Adam Sandler, Juancho Hernangómez</p>
                     </div>
-                    <div class="media-rating">★★★★★</div>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
 
             <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/GVPzGBvPrzw" title="Gran Turismo" allowfullscreen></iframe>
-                </div>
-                <div class="film-info">
-                    <span class="media-rank">RANK #3</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BMDk0MzhiZjItNzQ2OC00MmM4LWI1YTktMTE5YzNmZTVmOGE0XkEyXkFqcGc@._V1_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMDk0MzhiZjItNzQ2OC00MmM4LWI1YTktMTE5YzNmZTVmOGE0XkEyXkFqcGc@._V1_.jpg" class="mini-poster" alt="Gran Turismo Poster">
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/GVPzGBvPrzw" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://c8.alamy.com/comp/2R3MJF5/gran-turismo-poster-from-left-orlando-bloom-david-harbour-archie-madekwe-2023-columbia-pictures-courtesy-everett-collection-2R3MJF5.jpg" class="photo-link" target="phototab">
+                            <img src="https://c8.alamy.com/comp/2R3MJF5/gran-turismo-poster-from-left-orlando-bloom-david-harbour-archie-madekwe-2023-columbia-pictures-courtesy-everett-collection-2R3MJF5.jpg" alt="Gran Turismo">
                             <span class="hover-text">View Art</span>
                         </a>
-                        <div>
-                            <h3>Gran Turismo</h3>
-                            <div class="blog-tag">Sports Drama</div>
-                        </div>
                     </div>
-                    <p class="synopsis">A gamer uses his virtual racing skills to earn a real seat on a pro racing team, chasing an impossible dream.</p>
+                </div>
+                <div class="film-info-content">
+                    <span class="media-rank">RANK #3</span>
+                    <div class="film-category">Sports Drama</div>
+                    <h2 class="film-title">Gran Turismo</h2>
+                    <p class="film-synopsis">A gamer uses his virtual racing skills to earn a real seat on a pro racing team, chasing an impossible dream.</p>
                     <div class="media-details">
                         <p><strong>Director:</strong> Neill Blomkamp</p>
                         <p><strong>Starring:</strong> Archie Madekwe, David Harbour</p>
                     </div>
-                    <div class="media-rating">★★★★☆</div>
+                    <div class="rating">★★★★☆</div>
                 </div>
             </div>
 
             <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/3jzWk00x51A" title="Whiplash" allowfullscreen></iframe>
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/b-YCKtBb0L4" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://lh4.googleusercontent.com/proxy/VkYrTs3vR2Oj5KjcWac4OgoK5rWx_oI9bubriUnUDGHtd-5zHF0lXAqOPeCei427pAGT11mPp2_uoLItfYpBiG5JJAaYpD1ndv7kVcLWLo9a2rD3Eo7Y" class="photo-link" target="phototab">
+                            <img src="https://lh4.googleusercontent.com/proxy/VkYrTs3vR2Oj5KjcWac4OgoK5rWx_oI9bubriUnUDGHtd-5zHF0lXAqOPeCei427pAGT11mPp2_uoLItfYpBiG5JJAaYpD1ndv7kVcLWLo9a2rD3Eo7Y" alt="Last Chance U">
+                            <span class="hover-text">View Art</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="film-info">
+                <div class="film-info-content">
                     <span class="media-rank">RANK #4</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0N2M1MzhkY2E3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0N2M1MzhkY2E3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" class="mini-poster" alt="Whiplash Poster">
-                            <span class="hover-text">View Art</span>
-                        </a>
-                        <div>
-                            <h3>Whiplash</h3>
-                            <div class="blog-tag">Drama / Music</div>
-                        </div>
-                    </div>
-                    <p class="synopsis">A young drummer is pushed to his absolute limits by a ruthless instructor in the pursuit of perfection.</p>
-                    <div class="media-details">
-                        <p><strong>Director:</strong> Damien Chazelle</p>
-                        <p><strong>Starring:</strong> Miles Teller, J.K. Simmons</p>
-                    </div>
-                    <div class="media-rating">★★★★☆</div>
-                </div>
-            </div>
-
-            <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/b-YCKtBb0L4" title="Last Chance U" allowfullscreen></iframe>
-                </div>
-                <div class="film-info">
-                    <span class="media-rank">RANK #5</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BMDUyM2VlNzUtNjhjMy00NGIxLWE1MjMtNzM2ZjgwZmE2ZmQ0XkEyXkFqcGc@._V1_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMDUyM2VlNzUtNjhjMy00NGIxLWE1MjMtNzM2ZjgwZmE2ZmQ0XkEyXkFqcGc@._V1_.jpg" class="mini-poster" alt="Last Chance U Poster">
-                            <span class="hover-text">View Art</span>
-                        </a>
-                        <div>
-                            <h3>Last Chance U</h3>
-                            <div class="blog-tag">Sports Documentary</div>
-                        </div>
-                    </div>
-                    <p class="synopsis">Football players with difficult pasts fight for one last chance to reach Division I, balancing practices and struggles.</p>
+                    <div class="film-category">Sports Documentary</div>
+                    <h2 class="film-title">Last Chance U</h2>
+                    <p class="film-synopsis">Football players with difficult pasts fight for one last chance to reach Division I, balancing brutal practices and personal struggles.</p>
                     <div class="media-details">
                         <p><strong>Director:</strong> Greg Whiteley</p>
                         <p><strong>Starring:</strong> EMCC Players and Coaches</p>
                     </div>
-                    <div class="media-rating">★★★★☆½</div>
+                    <div class="rating">★★★★☆½</div>
                 </div>
             </div>
 
             <div class="film-row">
-                <div class="film-video-container">
-                    <iframe src="https://www.youtube.com/embed/0cQ3sBXpNtw" title="Amateur" allowfullscreen></iframe>
-                </div>
-                <div class="film-info">
-                    <span class="media-rank">RANK #6</span>
-                    <div class="film-header-flex">
-                        <a href="https://m.media-amazon.com/images/M/MV5BMjI2NDg2ODk3N15BMl5BanBnXkFtZTgwNDg3MTI2NDM@._V1_.jpg" class="photo-link" target="_blank">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMjI2NDg2ODk3N15BMl5BanBnXkFtZTgwNDg3MTI2NDM@._V1_.jpg" class="mini-poster" alt="Amateur Poster">
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/eJ3WYCZuKbA?si=s6_xdOiGcXFfdm7x" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://m.media-amazon.com/images/M/MV5BMTU4NDg0MzkzNV5BMl5BanBnXkFtZTgwODA3Mzc1MDE@._V1_.jpg" class="photo-link" target="phototab">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTU4NDg0MzkzNV5BMl5BanBnXkFtZTgwODA3Mzc1MDE@._V1_.jpg" alt="The Wind Rises">
                             <span class="hover-text">View Art</span>
                         </a>
-                        <div>
-                            <h3>Amateur</h3>
-                            <div class="blog-tag">Sports Drama</div>
-                        </div>
                     </div>
-                    <p class="synopsis">A young basketball prodigy discovers the shady business side of amateur sports after joining an elite prep school.</p>
+                </div>
+                <div class="film-info-content">
+                    <span class="media-rank">RANK #5</span>
+                    <div class="film-category">Historical Drama / Anime</div>
+                    <h2 class="film-title">The Wind Rises</h2>
+                    <p class="film-synopsis">A gifted engineer pursues his dream of designing beautiful airplanes while grappling with the reality of war.</p>
+                    <div class="media-details">
+                        <p><strong>Director:</strong> Hayao Miyazaki</p>
+                        <p><strong>Starring:</strong> Hideaki Anno, Emily Blunt</p>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="film-row">
+                <div class="film-visuals-wrapper">
+                    <div class="video-side-container">
+                        <iframe src="https://www.youtube.com/embed/0cQ3sBXpNtw" allowfullscreen></iframe>
+                    </div>
+                    <div class="floating-poster">
+                        <a href="https://cdn.kinocheck.com/i/w=1200/wkntq7tmkm.jpg" class="photo-link" target="phototab">
+                            <img src="https://cdn.kinocheck.com/i/w=1200/wkntq7tmkm.jpg" alt="Amateur">
+                            <span class="hover-text">View Art</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="film-info-content">
+                    <span class="media-rank">RANK #6</span>
+                    <div class="film-category">Sports Drama</div>
+                    <h2 class="film-title">Amateur</h2>
+                    <p class="film-synopsis">A young basketball prodigy discovers the shady business side of amateur sports after joining an elite prep school.</p>
                     <div class="media-details">
                         <p><strong>Director:</strong> Ryan Koo</p>
                         <p><strong>Starring:</strong> Michael Rainey Jr., Sharon Leal</p>
                     </div>
-                    <div class="media-rating">★★★½☆</div>
+                    <div class="rating">★★★½☆</div>
                 </div>
             </div>
 
+        </div>
+
+        <div style="text-align: center; margin: 5rem 0;">
+            <a href="https://yano-static.github.io/Landing-Page/MEDIA/media.html" class="btn-secondary">Back to Media Choices</a>
         </div>
     </main>
 
