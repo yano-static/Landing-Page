@@ -55,48 +55,70 @@ body {
 /* ================================================================
    4. PAGE HERO (Huge Titles)
 ================================================================ */
-.category-hero { text-align: center; padding: 4rem 0 5rem; max-width: 900px; margin: 0 auto; }
+.category-hero { text-align: center; padding: 4rem 0 5rem; max-width: 1120px; margin: 0 auto; }
 .eyebrow { color: var(--accent); font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; }
 .huge-title { font-family: "Lora", serif; font-size: clamp(4rem, 10vw, 8rem); color: var(--text-main); letter-spacing: -3px; margin: 0; line-height: 1; }
 .header-line { width: 50px; height: 2px; background: var(--accent); margin: 2rem auto 0; }
 
 /* ================================================================
-   5. FILM & TV LAYOUT (Horizontal Cinematic)
+   5. BEATS LAYOUT (The Grid)
+================================================================ */
+.media-container { max-width: 1120px; margin: 0 auto; padding: 1.5rem; }
+
+.media-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2.5rem; 
+    padding: 2rem 0;
+}
+
+.media-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(244, 247, 190, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft);
+}
+.media-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+
+/* Beats Audio Player & Cover Art */
+.media-visual-audio {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-art { width: 100%; height: 240px; object-fit: cover; border-bottom: 1px solid rgba(159, 168, 138, 0.2); }
+
+audio {
+    width: 100%; height: 40px; background: #231916;
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(90%) invert(100%);
+}
+
+/* ================================================================
+   6. FILM & TV LAYOUT (Horizontal Rows)
 ================================================================ */
 .film-list-horizontal { display: flex; flex-direction: column; gap: 6rem; padding: 3rem 0; max-width: 1120px; margin: 0 auto; }
 
 .film-row {
-    display: flex;
-    flex-direction: column; /* Stacks Visuals above Text */
-    gap: 2rem;
-    background: var(--bg-dark-card);
-    padding: 2.5rem;
-    border-radius: 20px;
-    border: 1px solid rgba(244, 247, 190, 0.05);
-    position: relative;
-    transition: all 0.3s ease;
+    display: flex; flex-direction: column; gap: 2rem; background: var(--bg-dark-card);
+    padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(244, 247, 190, 0.05);
+    position: relative; transition: all 0.3s ease;
 }
 
-.film-visuals-group {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-}
+.film-visuals-group { display: flex; gap: 2rem; align-items: flex-start; }
 
-/* Small Interactive Poster */
-.clickable-poster-container {
-    flex: 0 0 140px; /* Small fixed width */
-    position: relative;
-}
+.clickable-poster-container { flex: 0 0 140px; position: relative; }
 
-.photo-link {
-    display: block;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    position: relative;
-}
-
+.photo-link { display: block; overflow: hidden; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); position: relative; }
 .photo-link img { width: 100%; display: block; transition: transform 0.5s ease, filter 0.5s ease; }
 
 .hover-text {
@@ -104,48 +126,41 @@ body {
     background: rgba(22, 15, 12, 0.8); color: var(--col-light);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
-    opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+    opacity: 0; transition: opacity 0.3s ease;
 }
 
 .photo-link:hover img { transform: scale(1.05); filter: brightness(0.4) blur(1px); }
 .photo-link:hover .hover-text { opacity: 1; }
 
-/* Large Video Clip */
-.video-side-container {
-    flex: 1;
-    aspect-ratio: 16 / 9;
-    background: #000;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-}
-
+.video-side-container { flex: 1; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-soft); }
 .video-side-container iframe { width: 100%; height: 100%; border: none; }
 
 /* ================================================================
-   6. FILM INFO & METADATA
+   7. SHARED ELEMENTS (Rank, Tags, Typography)
 ================================================================ */
-.film-info-content { position: relative; }
-
 .media-rank {
-    position: absolute; top: -10px; right: 0; background: var(--accent);
-    color: #160f0c; font-weight: 800; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px;
+    position: absolute; top: -10px; right: 20px; background: var(--accent);
+    color: #160f0c; font-weight: 800; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; z-index: 10;
 }
 
-.film-title { font-family: "Lora", serif; font-size: 2.5rem; color: var(--col-light); margin: 0.5rem 0; }
-.blog-tag, .film-category { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.film-title, .media-card h3 { font-family: "Lora", serif; color: var(--col-light); margin: 0.5rem 0; }
+.film-title { font-size: 2.5rem; }
+.media-card h3 { font-size: 1.5rem; }
+
+.blog-tag, .film-category { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600; }
 
 .synopsis, .film-synopsis { 
-    font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin: 1rem 0;
+    font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin: 1rem 0;
     font-style: italic; border-left: 2px solid var(--col-olive); padding-left: 1rem; 
 }
 
+.media-details { flex-grow: 1; }
 .media-details p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.3rem; }
 .media-details strong { color: var(--accent); }
-.rating { color: var(--col-light); font-size: 1.2rem; letter-spacing: 4px; margin-top: 1rem; }
+.rating, .media-rating { color: var(--accent-blue); font-size: 1.2rem; letter-spacing: 4px; margin-top: auto; padding-top: 1rem; }
 
 /* ================================================================
-   7. FOOTER & UTILITIES
+   8. FOOTER & UTILITIES
 ================================================================ */
 .float-btn {
     position: fixed; bottom: 2rem; right: 2rem; padding: 0.7rem 1.4rem;
@@ -153,16 +168,18 @@ body {
     color: #160f0c !important; display: flex; align-items: center; gap: 8px;
     text-decoration: none; font-size: 0.75rem; font-weight: 700; z-index: 1000;
 }
-
 .site-footer { text-align: center; padding: 5rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
+.btn-secondary { display: inline-block; padding: 0.9rem 1.8rem; border-radius: var(--radius-pill); border: 1px solid var(--accent); color: var(--accent); text-decoration: none; transition: 0.3s; }
+.btn-secondary:hover { background: var(--accent); color: #160f0c; }
 
 /* ================================================================
-   8. RESPONSIVENESS
+   9. RESPONSIVENESS
 ================================================================ */
 @media (max-width: 900px) {
     .huge-title { font-size: 3.5rem; }
     .film-visuals-group { flex-direction: column; }
-    .clickable-poster-container { width: 120px; }
+    .clickable-poster-container { width: 100px; }
     .film-row { padding: 1.5rem; }
     .film-title { font-size: 1.8rem; }
+    .media-grid { grid-template-columns: 1fr; }
 }
