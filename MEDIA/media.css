@@ -1,5 +1,9 @@
-/* === 1. UNIFIED DESIGN SYSTEM === */
+/* ================================================================
+   1. DESIGN SYSTEM & VARIABLES
+================================================================
+*/
 :root {
+  /* Colors */
   --col-light: #f4f7be;
   --col-olive: #84714f;
   --col-brown: #5a3a31;
@@ -7,21 +11,36 @@
   --col-deep: #160f0c;
   --accent: #9FA88A;
   --accent-blue: #91aec1;
+  
+  /* Backgrounds */
   --bg-main: var(--col-deep);
-  --bg-card: #231916; /* Refined coffee tone */
+  --bg-card: #231916;
   --bg-dark-card: rgba(28, 19, 16, 0.95);
+  
+  /* Text */
   --text-main: var(--col-light);
   --text-muted: #d1c9b4;
-  --radius-lg: 32px;
-  --radius-md: 20px;
-  --radius-sm: 12px;
+  
+  /* Shapes & Shadows */
+  --radius-md: 12px;
   --radius-pill: 999px;
   --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
-/* === 2. BASE & RESET === */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* ================================================================
+   2. BASE & RESET
+================================================================
+*/
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
@@ -30,24 +49,111 @@ body {
   line-height: 1.75;
 }
 
-/* === 3. HEADER & NAVIGATION === */
-.site-header {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ================================================================
+   3. GLOBAL NAVIGATION (Header & Back Nav)
+================================================================
+*/
+.site-header { 
+  max-width: 1120px; 
+  margin: 0 auto; 
+  padding: 2.5rem 1.5rem; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
-.logo { font-family: "Lora", serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+
+.logo { 
+  font-family: "Lora", serif; 
+  font-size: 2.1rem; 
+  font-weight: 700; 
+  color: var(--text-main); 
+  text-decoration: none; 
+}
+
 .logo span { color: var(--accent); }
-.nav a { margin-left: 1.5rem; font-size: 0.9rem; text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
+
+.nav a { 
+  margin-left: 1.5rem; 
+  font-size: 0.9rem; 
+  text-decoration: none; 
+  color: var(--text-muted); 
+  transition: color 0.2s; 
+}
+
 .nav a:hover { color: var(--accent); }
 
-/* === 4. MEDIA HUB (Choices Page) === */
+/* Top-Middle Back Navigation */
+.back-nav { 
+  display: flex; 
+  justify-content: center; 
+  padding-top: 2rem; 
+  width: 100%; 
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.6;
+}
+
+.back-link:hover { color: var(--accent); opacity: 1; transform: translateY(-2px); }
+
+.back-arrow { 
+  font-size: 1.1rem; 
+  transition: transform 0.3s ease; 
+}
+
+.back-link:hover .back-arrow { transform: translateX(-5px); }
+
+/* ================================================================
+   4. PAGE HERO (Huge Titles)
+================================================================
+*/
+.category-hero { 
+  text-align: center; 
+  padding: 4rem 0 5rem; 
+}
+
+.eyebrow { 
+  color: var(--accent); 
+  font-size: 0.9rem; 
+  letter-spacing: 0.2em; 
+  text-transform: uppercase; 
+  margin-bottom: 0.5rem; 
+}
+
+.huge-title { 
+  font-family: "Lora", serif; 
+  font-size: 8rem; 
+  color: var(--text-main); 
+  letter-spacing: -3px; 
+  margin: 0; 
+  line-height: 1; 
+}
+
+.header-line { 
+  width: 50px; 
+  height: 2px; 
+  background: var(--accent); 
+  margin: 2rem auto 0; 
+}
+
+/* ================================================================
+   5. MEDIA HUB (Choices Grid)
+================================================================
+*/
 .media-hub { padding: 4rem 0; text-align: center; }
-.media-hub h1 { font-family: "Lora", serif; font-size: 4rem; margin-bottom: 3rem; }
+
 .hub-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
 .hub-card {
   background: #3b2922;
   width: 220px;
@@ -62,25 +168,22 @@ body {
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(244, 247, 190, 0.05);
 }
+
 .hub-card:hover { transform: translateY(-10px); background: var(--bg-dark-card); border-color: var(--accent); }
+
 .hub-icon { width: 70px; height: 70px; color: var(--accent); margin-bottom: 1rem; }
-.hub-card span { font-weight: 600; font-size: 1.2rem; color: var(--text-main); }
 
-/* === 5. CATEGORY HERO (Beats/Films Title) === */
-.category-hero { text-align: center; padding: 6rem 0 4rem; }
-.huge-title {
-  font-family: "Lora", serif;
-  font-size: 8rem; 
-  color: var(--text-main);
-  letter-spacing: -3px;
-  margin: 0;
-  line-height: 1;
-}
-.header-line { width: 60px; height: 3px; background: var(--accent); margin: 2rem auto 0; }
-
-/* === 6. MEDIA GRID & CARDS === */
+/* ================================================================
+   6. GRID & CARDS (Beats, Films, TV)
+================================================================
+*/
 .media-container { max-width: 1120px; margin: 0 auto; padding: 1.5rem; }
-.media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+
+.media-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 2.5rem; 
+}
 
 .media-card {
   background: var(--bg-card);
@@ -93,7 +196,11 @@ body {
   flex-direction: column;
   box-shadow: var(--shadow-soft);
 }
-.media-card:hover { transform: translateY(-12px) scale(1.02); border-color: var(--accent); }
+
+.media-card:hover { 
+  transform: translateY(-12px) scale(1.02); 
+  border-color: var(--accent); 
+}
 
 .media-rank {
   position: absolute;
@@ -108,69 +215,129 @@ body {
   z-index: 10;
 }
 
-/* Smart Visual Container (Adapts to Beats or Films) */
-.media-visual {
+/* ================================================================
+   7. MEDIA PLAYERS & VISUALS
+================================================================
+*/
+
+/* --- AUDIO PLAYER (Beats) --- */
+.media-visual-audio { 
+  width: 100%; 
+  border-radius: 8px; 
+  margin-bottom: 1.5rem; 
+  overflow: hidden; 
+  background: #121212; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.album-art { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover; 
+  border-bottom: 1px solid rgba(159, 168, 138, 0.3); 
+}
+
+audio {
   width: 100%;
-  min-height: 152px; /* For Beats */
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 40px;
+  background: #231916;
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(90%) invert(100%);
 }
 
-/* If the card is in a Films section, make the visual taller */
-#films-section .media-visual, 
-.films-page .media-visual {
+/* --- VIDEO PLAYER (Films) --- */
+#films-section .media-visual { 
+  width: 100%; 
   height: 350px; 
+  border-radius: 8px; 
+  margin-bottom: 1.5rem; 
+  overflow: hidden; 
+  background: #000; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
-.media-visual iframe, 
-.media-visual blockquote { width: 100% !important; height: 100% !important; border: none; }
+#films-section iframe { width: 100%; height: 100%; border: none; }
 
-.blog-tag {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
-  font-weight: 400;
+/* ================================================================
+   8. TEXT CONTENT & RATINGS
+================================================================
+*/
+.blog-tag { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem; opacity: 0.7; }
+
+.media-card h3 { 
+  font-family: "Lora", serif; 
+  font-size: 1.6rem; 
+  color: var(--text-main); 
+  margin-bottom: 0.5rem; 
 }
 
-.media-card h3 { font-family: "Lora", serif; font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.5rem; }
 .media-details { font-size: 0.95rem; color: var(--text-muted); flex-grow: 1; }
+
 .media-details strong { color: var(--accent); }
 
-.synopsis { display: block; margin-top: 1rem; font-style: italic; font-size: 0.85rem; border-left: 2px solid var(--col-olive); padding-left: 0.75rem; }
-.media-rating { color: var(--accent-blue); font-size: 1.2rem; letter-spacing: 4px; padding-top: 1rem; border-top: 1px solid rgba(244, 247, 190, 0.05); }
-
-/* === 7. FLOATING BTN & FOOTER === */
-.float-btn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius-pill);
-  background: var(--accent);
-  color: #160f0c !important;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 700;
-  z-index: 1000;
-  transition: all 0.3s ease;
+.synopsis { 
+  display: block; 
+  margin-top: 1rem; 
+  font-style: italic; 
+  font-size: 0.85rem; 
+  border-left: 2px solid var(--col-olive); 
+  padding-left: 0.75rem; 
 }
+
+.media-rating { 
+  color: var(--accent-blue); 
+  font-size: 1.2rem; 
+  letter-spacing: 4px; 
+  padding-top: 1rem; 
+  border-top: 1px solid rgba(244, 247, 190, 0.05); 
+}
+
+/* ================================================================
+   9. FOOTER & BUTTONS
+================================================================
+*/
+.float-btn { 
+  position: fixed; 
+  bottom: 2rem; 
+  right: 2rem; 
+  padding: 0.6rem 1.2rem; 
+  border-radius: var(--radius-pill); 
+  background: var(--accent); 
+  color: #160f0c !important; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  text-decoration: none; 
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  z-index: 1000; 
+  transition: all 0.3s ease; 
+}
+
 .float-btn:hover { background: var(--accent-blue); transform: translateY(-5px); }
+
 .site-footer { text-align: center; padding: 4rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
-.btn-secondary { display: inline-block; padding: 0.9rem 1.8rem; border-radius: var(--radius-pill); border: 1px solid var(--accent); color: var(--accent); text-decoration: none; transition: 0.3s; }
+
+.btn-secondary { 
+  display: inline-block; 
+  padding: 0.9rem 1.8rem; 
+  border-radius: var(--radius-pill); 
+  border: 1px solid var(--accent); 
+  color: var(--accent); 
+  text-decoration: none; 
+  transition: 0.3s; 
+}
+
 .btn-secondary:hover { background: var(--accent); color: #160f0c; }
 
-/* === 8. RESPONSIVENESS === */
-@media (max-width: 768px) {
-  .huge-title { font-size: 4rem; }
-  .media-grid { grid-template-columns: 1fr; }
-  .media-visual { height: 152px !important; } /* Standard for mobile */
+/* ================================================================
+   10. RESPONSIVENESS
+================================================================
+*/
+@media (max-width: 768px) { 
+  .huge-title { font-size: 3.5rem; } 
+  .media-grid { grid-template-columns: 1fr; } 
+  .media-visual-audio, #films-section .media-visual { height: auto; }
 }
