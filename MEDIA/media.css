@@ -1,4 +1,6 @@
-/* 1. DESIGN SYSTEM & VARIABLES */
+/* ================================================================
+   1. DESIGN SYSTEM & VARIABLES
+================================================================ */
 :root {
     --col-light: #f4f7be;
     --col-olive: #84714f;
@@ -18,7 +20,9 @@
     --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
-/* 2. BASE & RESET */
+/* ================================================================
+   2. BASE & RESET
+================================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -29,7 +33,9 @@ body {
     line-height: 1.75;
 }
 
-/* 3. GLOBAL NAVIGATION (Header & Back Nav) */
+/* ================================================================
+   3. NAVIGATION (Header & Back Nav)
+================================================================ */
 .site-header { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: "Lora", serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
 .logo span { color: var(--accent); }
@@ -46,160 +52,117 @@ body {
 .back-arrow { font-size: 1.1rem; transition: transform 0.3s ease; }
 .back-link:hover .back-arrow { transform: translateX(-5px); }
 
-/* 4. PAGE HERO */
+/* ================================================================
+   4. PAGE HERO (Huge Titles)
+================================================================ */
 .category-hero { text-align: center; padding: 4rem 0 5rem; max-width: 900px; margin: 0 auto; }
 .eyebrow { color: var(--accent); font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; }
 .huge-title { font-family: "Lora", serif; font-size: clamp(4rem, 10vw, 8rem); color: var(--text-main); letter-spacing: -3px; margin: 0; line-height: 1; }
 .header-line { width: 50px; height: 2px; background: var(--accent); margin: 2rem auto 0; }
 
-/* 5. UNIVERSAL CARD ELEMENTS */
-.media-rank {
-    position: absolute; top: -10px; right: 20px; background: var(--accent);
-    color: #160f0c; font-weight: 800; font-size: 0.7rem; padding: 2px 8px;
-    border-radius: 4px; z-index: 10;
-}
-.blog-tag, .film-category { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
-.media-rating, .rating { color: var(--col-light); font-size: 1.2rem; letter-spacing: 4px; }
-.synopsis, .film-synopsis { display: block; margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-.synopsis { font-style: italic; border-left: 2px solid var(--col-olive); padding-left: 0.75rem; }
+/* ================================================================
+   5. FILM & TV LAYOUT (Horizontal Cinematic)
+================================================================ */
+.film-list-horizontal { display: flex; flex-direction: column; gap: 6rem; padding: 3rem 0; max-width: 1120px; margin: 0 auto; }
 
-/* 6. BEATS LAYOUT (Music Cards) */
-.media-container { max-width: 1120px; margin: 0 auto; padding: 1.5rem; }
-.media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-
-.media-card {
-    background: var(--bg-card); padding: 2rem; border-radius: 16px; 
-    border: 1px solid rgba(244, 247, 190, 0.05); position: relative; transition: all 0.3s ease;
-}
-.media-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-
-.media-visual-audio { 
-    width: 100%; border-radius: 8px; margin-bottom: 1.5rem; overflow: hidden; 
-    background: #121212; display: flex; flex-direction: column; 
-}
-.album-art { width: 100%; height: 240px; object-fit: cover; }
-
-audio {
-    width: 100%; height: 40px; background: #231916;
-    filter: sepia(20%) saturate(70%) grayscale(1) contrast(90%) invert(100%);
-}
-
-/* 7. FILM & TV LAYOUT (Horizontal/Editorial) */
-.film-list-horizontal { display: flex; flex-direction: column; gap: 5rem; padding: 3rem 0; }
-
-.film-entry {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 50px;
-    align-items: start;
+.film-row {
+    display: flex;
+    flex-direction: column; /* Stacks Visuals above Text */
+    gap: 2rem;
     background: var(--bg-dark-card);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid rgba(244, 247, 190, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.film-poster img {
-    width: 100%;
+.film-visuals-group {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Small Interactive Poster */
+.clickable-poster-container {
+    flex: 0 0 140px; /* Small fixed width */
+    position: relative;
+}
+
+.photo-link {
+    display: block;
+    overflow: hidden;
     border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+.photo-link img { width: 100%; display: block; transition: transform 0.5s ease, filter 0.5s ease; }
+
+.hover-text {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(22, 15, 12, 0.8); color: var(--col-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+}
+
+.photo-link:hover img { transform: scale(1.05); filter: brightness(0.4) blur(1px); }
+.photo-link:hover .hover-text { opacity: 1; }
+
+/* Large Video Clip */
+.video-side-container {
+    flex: 1;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
     box-shadow: var(--shadow-soft);
 }
 
-.film-title { font-family: "Lora", serif; font-size: 2.5rem; color: var(--col-light); margin: 0.5rem 0; }
-.film-meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-.film-meta span { color: var(--accent-blue); font-weight: 600; }
+.video-side-container iframe { width: 100%; height: 100%; border: none; }
 
-.video-embed {
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    border: 1px solid rgba(132, 113, 79, 0.3);
+/* ================================================================
+   6. FILM INFO & METADATA
+================================================================ */
+.film-info-content { position: relative; }
+
+.media-rank {
+    position: absolute; top: -10px; right: 0; background: var(--accent);
+    color: #160f0c; font-weight: 800; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px;
 }
 
-/* 8. STICKY BUTTONS & FOOTER */
+.film-title { font-family: "Lora", serif; font-size: 2.5rem; color: var(--col-light); margin: 0.5rem 0; }
+.blog-tag, .film-category { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
+
+.synopsis, .film-synopsis { 
+    font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin: 1rem 0;
+    font-style: italic; border-left: 2px solid var(--col-olive); padding-left: 1rem; 
+}
+
+.media-details p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+.media-details strong { color: var(--accent); }
+.rating { color: var(--col-light); font-size: 1.2rem; letter-spacing: 4px; margin-top: 1rem; }
+
+/* ================================================================
+   7. FOOTER & UTILITIES
+================================================================ */
 .float-btn {
     position: fixed; bottom: 2rem; right: 2rem; padding: 0.7rem 1.4rem;
     border-radius: var(--radius-pill); background: var(--accent);
     color: #160f0c !important; display: flex; align-items: center; gap: 8px;
-    text-decoration: none; font-size: 0.75rem; font-weight: 700; z-index: 1000; transition: all 0.3s ease;
-    box-shadow: var(--shadow-soft);
+    text-decoration: none; font-size: 0.75rem; font-weight: 700; z-index: 1000;
 }
-.float-btn:hover { background: var(--accent-blue); transform: translateY(-5px); }
+
 .site-footer { text-align: center; padding: 5rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
 
-/* 9. RESPONSIVENESS */
+/* ================================================================
+   8. RESPONSIVENESS
+================================================================ */
 @media (max-width: 900px) {
-    .huge-title { font-size: 4.5rem; }
-    .film-entry { grid-template-columns: 1fr; padding: 2rem; }
-    .film-poster { max-width: 240px; margin: 0 auto; }
-    .video-embed { max-width: 100%; }
-}
-
-/* Clickable Poster Styling */
-.photo-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-}
-
-.photo-link img {
-    display: block;
-    width: 100%;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-/* Hover Overlay Text */
-.hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(22, 15, 12, 0.7); /* Deep brown overlay */
-    color: var(--col-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none; /* Let clicks pass through to the link */
-}
-
-/* Hover Effects */
-.photo-link:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.5) blur(2px);
-}
-
-.photo-link:hover .hover-text {
-    opacity: 1;
-}
-
-/* Specific adjustment for the small film posters */
-.mini-poster-container {
-    width: 80px;
-    flex-shrink: 0;
-}
-
-.mini-poster-container .photo-link {
-    border-radius: 4px; /* Slightly smaller radius for small images */
-}
-
-.mini-poster-container .hover-text {
-    font-size: 0.6rem; /* Smaller text for smaller posters */
-}
-
-.film-header-flex {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 1rem;
+    .huge-title { font-size: 3.5rem; }
+    .film-visuals-group { flex-direction: column; }
+    .clickable-poster-container { width: 120px; }
+    .film-row { padding: 1.5rem; }
+    .film-title { font-size: 1.8rem; }
 }
