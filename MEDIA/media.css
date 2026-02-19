@@ -207,3 +207,72 @@ body {
   .media-hub h1 { font-size: 2.5rem; }
   .media-visual { height: 250px; }
 }
+
+/* === CENTERED HERO HEADER === */
+.category-hero {
+    text-align: center;
+    padding: 5rem 0 4rem;
+}
+
+.huge-title {
+    font-family: "Lora", serif;
+    font-size: 6rem; /* Very large emphasized text */
+    color: var(--text-main);
+    letter-spacing: -2px;
+    margin: 0.5rem 0;
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto;
+}
+
+/* === REFINED CARD LOOK (Based on Screenshot) === */
+.media-card {
+    background: #231916; /* Darker coffee-tone card */
+    border: 1px solid rgba(244, 247, 190, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.media-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: var(--accent);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* Tag style from your screenshot */
+.blog-tag {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Smooth Spotify Embed */
+.media-visual {
+    background: #121212;
+    height: 152px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Fixed the Rank label to match the screenshot badge style */
+.media-rank {
+    background: #9FA88A;
+    color: #160f0c;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    top: -10px;
+}
+
+@media (max-width: 768px) {
+    .huge-title { font-size: 3.5rem; }
+}
