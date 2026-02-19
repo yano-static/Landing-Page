@@ -1,4 +1,4 @@
-/* === 1. UNIFIED DESIGN SYSTEM (Variables) === */
+/* === 1. UNIFIED DESIGN SYSTEM === */
 :root {
   --col-light: #f4f7be;
   --col-olive: #84714f;
@@ -7,13 +7,11 @@
   --col-deep: #160f0c;
   --accent: #9FA88A;
   --accent-blue: #91aec1;
-
   --bg-main: var(--col-deep);
   --bg-card: #3b2922;
   --bg-dark-card: rgba(28, 19, 16, 0.95);
   --text-main: var(--col-light);
   --text-muted: #d1c9b4;
-
   --radius-lg: 32px;
   --radius-md: 20px;
   --radius-sm: 12px;
@@ -22,104 +20,104 @@
 }
 
 /* === 2. BASE & RESET === */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   min-height: 100vh;
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top, #3f2c24, var(--bg-main));
   color: var(--text-main);
   line-height: 1.75;
 }
 
-/* === 3. SHARED HEADER & FOOTER === */
+/* === 3. HEADER & NAVIGATION === */
 .site-header {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 1.2rem;
+  padding: 2.5rem 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-
-.logo {
-  font-family: "Lora", serif;
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  text-decoration: none;
-}
-
+.logo { font-family: "Lora", serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
 .logo span { color: var(--accent); }
-
-.nav a {
-  margin-left: 1.5rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--text-muted);
-  transition: color 0.2s;
-}
-
+.nav a { margin-left: 1.5rem; font-size: 0.9rem; text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
 .nav a:hover { color: var(--accent); }
 
-.site-footer {
+/* === 4. MEDIA HUB (The Selection Cards) === */
+.media-hub {
+  padding: 4rem 0;
   text-align: center;
-  padding: 4rem 1.5rem 2rem;
-  color: var(--text-muted);
-  font-size: 0.85rem;
 }
-
-/* === 4. MEDIA LAYOUT === */
-.media-container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-.category-header {
-  margin-bottom: 3rem;
-  border-bottom: 2px solid var(--col-olive);
-  padding-bottom: 1rem;
-}
-
-.category-header h2 {
+.media-hub h1 {
   font-family: "Lora", serif;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+}
+.hub-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.hub-card {
+  background: var(--bg-card);
+  width: 220px;
+  height: 220px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(244, 247, 190, 0.05);
+}
+.hub-card:hover {
+  transform: translateY(-10px);
+  background: var(--bg-dark-card);
+  border-color: var(--accent);
+}
+.hub-icon {
+  width: 70px;
+  height: 70px;
   color: var(--accent);
+  margin-bottom: 1rem;
+}
+.hub-card span {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--text-main);
 }
 
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--col-olive), transparent);
+  margin: 4rem 0;
 }
 
-/* === 5. THE CARDS === */
+/* === 5. MEDIA GRID & CARDS === */
+.media-container { max-width: 1120px; margin: 0 auto; padding: 1.5rem; }
+.category-block { padding: 4rem 0; }
+.category-header { margin-bottom: 3rem; border-bottom: 2px solid var(--col-olive); padding-bottom: 1rem; }
+.category-header h2 { font-family: "Lora", serif; font-size: 2.5rem; color: var(--accent); }
+.media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+
 .media-card {
   background: var(--bg-dark-card);
   border: 1px solid rgba(244, 247, 190, 0.1);
   border-radius: var(--radius-md);
   padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  position: relative;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  box-shadow: var(--shadow-soft);
 }
-
-.media-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-blue);
-}
-
+.media-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); }
 .media-rank {
   position: absolute;
   top: -12px;
@@ -130,142 +128,43 @@ body {
   font-size: 0.75rem;
   padding: 0.4rem 0.9rem;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
-
 .media-visual {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--col-deep);
+  height: 152px;
   border-radius: var(--radius-sm);
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--col-dark);
   overflow: hidden;
+  border: 1px solid rgba(244, 247, 190, 0.1);
 }
+.media-card h3 { font-family: "Lora", serif; font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.5rem; }
+.media-details { font-size: 0.95rem; color: var(--text-muted); flex-grow: 1; }
+.synopsis { display: block; margin-top: 1rem; font-style: italic; font-size: 0.85rem; border-left: 2px solid var(--col-olive); padding-left: 0.75rem; }
+.media-rating { color: var(--accent-blue); font-size: 1.2rem; letter-spacing: 4px; padding-top: 1rem; border-top: 1px solid rgba(244, 247, 190, 0.05); }
 
-/* For your Spotify embeds/Videos later */
-.media-visual iframe, .media-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-}
-
-.media-card h3 {
-  font-family: "Lora", serif;
-  font-size: 1.6rem;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
-}
-
-.media-details {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.media-details p { margin-bottom: 0.4rem; }
-.media-details strong { color: var(--accent); font-weight: 600; }
-
-.synopsis {
-  display: block;
-  margin-top: 1rem;
-  font-style: italic;
-  font-size: 0.85rem;
-  border-left: 2px solid var(--col-olive);
-  padding-left: 0.75rem;
-}
-
-.media-rating {
-  color: var(--accent-blue);
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(244, 247, 190, 0.05);
-}
-
-/* === 6. FLOATING BACK TO TOP (Pill Shape - Bottom Right) === */
+/* === 6. FLOATING BTN & FOOTER === */
 .float-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  
-  /* Pill Shape */
-  width: auto;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius-pill);
-  
   background: var(--accent);
   color: var(--col-deep) !important;
-  
-  /* Layout */
   display: flex;
   align-items: center;
   gap: 8px;
-  
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: var(--shadow-soft);
   z-index: 1000;
   transition: all 0.3s ease;
 }
+.float-btn:hover { background: var(--accent-blue); transform: translateY(-5px); }
+.site-footer { text-align: center; padding: 4rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
+.btn-secondary { display: inline-block; padding: 0.9rem 1.8rem; border-radius: var(--radius-pill); border: 1px solid var(--accent); color: var(--accent); text-decoration: none; }
 
-.float-btn:hover {
-  background: var(--accent-blue);
-  transform: translateY(-5px);
-}
-
-.float-btn .arrow {
-  font-size: 1rem;
-}
-
-/* === 7. BUTTONS === */
-.btn-secondary {
-  display: inline-block;
-  padding: 0.9rem 1.8rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--accent);
-  background: transparent;
-  color: var(--accent);
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(159, 168, 138, 0.15);
-  color: var(--col-light);
-}
-
-/* Responsiveness */
 @media (max-width: 768px) {
   .media-grid { grid-template-columns: 1fr; }
-  .float-btn { margin-left: auto; right: 1.5rem; }
-}
-
-.media-visual {
-  width: 100%;
-  height: 152px; 
-  margin-bottom: 1.5rem;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(244, 247, 190, 0.1); 
-}
-
-.media-visual iframe {
-  width: 100%;
-  height: 152px;
-  border: none;
-  display: block;
+  .media-hub h1 { font-size: 2.5rem; }
 }
