@@ -182,3 +182,24 @@ audio {
 .photo-link:hover .hover-text {
     opacity: 1;
 }
+
+/* Specific adjustment for the small film posters */
+.mini-poster-container {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.mini-poster-container .photo-link {
+    border-radius: 4px; /* Slightly smaller radius for small images */
+}
+
+.mini-poster-container .hover-text {
+    font-size: 0.6rem; /* Smaller text for smaller posters */
+}
+
+.film-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
