@@ -249,3 +249,18 @@ body {
   .media-grid { grid-template-columns: 1fr; }
   .float-btn { margin-left: auto; right: 1.5rem; }
 }
+
+.media-visual {
+    width: 100%;
+    /* Remove the fixed 16/9 ratio so the Spotify player can use its full height */
+    height: auto; 
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: transparent; /* No need for background color since the iframe fills it */
+}
+
+.media-visual iframe {
+    display: block;
+    border: none;
+}
