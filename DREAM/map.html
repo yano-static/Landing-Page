@@ -1,44 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dream Places to Visit</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f4f8;
-    }
-    h1 {
-      color: #333;
-    }
-    img {
-      width: 80%;
-      max-width: 900px;
-      border-radius: 10px;
-    }
-  </style>
+    <title>Dream Places to Visit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .section {
+            padding: 50px;
+            margin-top: 50px;
+            background-color: white;
+        }
+
+        img {
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .collage {
+            width: 800px;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
-  <h1>🌍 My Dream Places to Visit</h1>
-  <p>Click on a part of the image to learn more about each destination!</p>
 
-  <!-- Collage Image -->
-  <img src="collage.jpg" alt="Dream travel collage" usemap="#dreamplaces">
+<h1>🌍 My Dream Places to Visit</h1>
+<p>Click on a place in the collage to explore why I want to visit!</p>
 
-  <!-- Image Map -->
-  <map name="dreamplaces">
-    <!-- Circle: Paris -->
-    <area shape="circle" coords="150,200,70" href="paris.html" alt="Paris" target="_self">
-    <!-- Rectangle: Tokyo -->
-    <area shape="rect" coords="400,100,550,250" href="tokyo.html" alt="Tokyo" target="_self">
-    <!-- Polygon 1: New York -->
-    <area shape="poly" coords="600,300,700,250,750,350,650,400" href="newyork.html" alt="New York" target="_self">
-    <!-- Polygon 2: Santorini -->
-    <area shape="poly" coords="250,350,300,450,200,500,150,400" href="santorini.html" alt="Santorini" target="_self">
-    <!-- Polygon 3: Bali -->
-    <area shape="poly" coords="500,450,600,420,650,500,550,550" href="bali.html" alt="Bali" target="_self">
-  </map>
+<!-- COLLAGE IMAGE -->
+<img src="https://via.placeholder.com/800x500" usemap="#dreammap" class="collage">
+
+<map name="dreammap">
+
+    <!-- Circle Shape (Paris) -->
+    <area shape="circle" coords="150,150,100" href="#paris">
+
+    <!-- Square Shape (Tokyo) -->
+    <area shape="rect" coords="300,50,500,250" href="#tokyo">
+
+    <!-- Polygon 1 (New York) -->
+    <area shape="poly" coords="550,50,750,100,700,250,520,200" href="#newyork">
+
+    <!-- Polygon 2 (Rome) -->
+    <area shape="poly" coords="100,300,250,350,200,480,50,420" href="#rome">
+
+    <!-- Polygon 3 (Sydney) -->
+    <area shape="poly" coords="450,300,650,300,750,450,500,480" href="#sydney">
+
+</map>
+
+
+<!-- PARIS -->
+<div id="paris" class="section">
+    <h2>Paris, France</h2>
+    <p>I want to visit Paris because of its romantic atmosphere, beautiful architecture, and world-famous landmarks like the Eiffel Tower.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg" width="300">
+</div>
+
+
+<!-- TOKYO -->
+<div id="tokyo" class="section">
+    <h2>Tokyo, Japan</h2>
+    <p>Tokyo fascinates me with its blend of modern technology and traditional culture, from neon skyscrapers to historic temples.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Tokyo_Tower_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sensoji_Temple_Wikimedia_Commons.jpg" width="300">
+</div>
+
+
+<!-- NEW YORK -->
+<div id="newyork" class="section">
+    <h2>New York City, USA</h2>
+    <p>I dream of visiting NYC to see Times Square, Broadway shows, and experience the fast-paced city life.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Times_Square_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Statue_of_Liberty_Wikimedia_Commons.jpg" width="300">
+</div>
+
+
+<!-- ROME -->
+<div id="rome" class="section">
+    <h2>Rome, Italy</h2>
+    <p>Rome attracts me because of its ancient history, especially landmarks like the Colosseum and Vatican City.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/St_Peter%27s_Basilica_Wikimedia_Commons.jpg" width="300">
+</div>
+
+
+<!-- SYDNEY -->
+<div id="sydney" class="section">
+    <h2>Sydney, Australia</h2>
+    <p>I want to visit Sydney for its beautiful beaches and the iconic Sydney Opera House.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bondi_Beach_Wikimedia_Commons.jpg" width="300">
+</div>
+
 </body>
 </html>
