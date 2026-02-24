@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Places to Visit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      color: #333;
+    }
+    img {
+      width: 80%;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 My Dream Places to Visit</h1>
+  <p>Click on a part of the image to learn more about each destination!</p>
+
+  <!-- Collage Image -->
+  <img src="collage.jpg" alt="Dream travel collage" usemap="#dreamplaces">
+
+  <!-- Image Map -->
+  <map name="dreamplaces">
+    <!-- Circle: Paris -->
+    <area shape="circle" coords="150,200,70" href="paris.html" alt="Paris" target="_self">
+    <!-- Rectangle: Tokyo -->
+    <area shape="rect" coords="400,100,550,250" href="tokyo.html" alt="Tokyo" target="_self">
+    <!-- Polygon 1: New York -->
+    <area shape="poly" coords="600,300,700,250,750,350,650,400" href="newyork.html" alt="New York" target="_self">
+    <!-- Polygon 2: Santorini -->
+    <area shape="poly" coords="250,350,300,450,200,500,150,400" href="santorini.html" alt="Santorini" target="_self">
+    <!-- Polygon 3: Bali -->
+    <area shape="poly" coords="500,450,600,420,650,500,550,550" href="bali.html" alt="Bali" target="_self">
+  </map>
+</body>
+</html>
