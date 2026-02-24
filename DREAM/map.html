@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dream Places to Visit</title>
+    <title>Dream Places Image Map</title>
+
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #111;
+            color: white;
         }
 
         h1 {
-            margin-top: 20px;
+            margin: 30px 0;
+        }
+
+        .collage {
+            display: block;
+            margin: auto;
         }
 
         .section {
-            padding: 50px;
+            padding: 80px 20px;
+            background-color: #222;
             margin-top: 50px;
-            background-color: white;
         }
 
-        img {
+        .section img {
+            width: 300px;
             margin: 10px;
             border-radius: 10px;
         }
 
-        .collage {
-            width: 800px;
-            height: 500px;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
+
 <body>
 
 <h1>🌍 My Dream Places to Visit</h1>
-<p>Click on a place in the collage to explore why I want to visit!</p>
+<p>Click on a shape in the collage to explore!</p>
 
 <!-- COLLAGE IMAGE -->
-<img src="https://via.placeholder.com/800x500" usemap="#dreammap" class="collage">
+<img src="Copy of Lifestyle Website in Dusty Pink Charcoal Light Pink Notes App Chic Style.png" usemap="#dreammap" width="2048" height="1152" class="collage">
 
 <map name="dreammap">
 
-    <!-- Circle Shape (Paris) -->
-    <area shape="circle" coords="150,150,100" href="#paris">
+    <!-- 🔵 CIRCLE (Bottom Center) -->
+    <area shape="circle" coords="1024,850,230" href="#paris">
 
-    <!-- Square Shape (Tokyo) -->
-    <area shape="rect" coords="300,50,500,250" href="#tokyo">
+    <!-- 🟦 RECTANGLE (Top Center) -->
+    <area shape="rect" coords="720,170,1330,520" href="#tokyo">
 
-    <!-- Polygon 1 (New York) -->
-    <area shape="poly" coords="550,50,750,100,700,250,520,200" href="#newyork">
+    <!-- 🔷 POLYGON 1 (Top Left Hexagon) -->
+    <area shape="poly"
+        coords="230,140, 500,140, 580,320, 500,500, 230,500, 150,320"
+        href="#newyork">
 
-    <!-- Polygon 2 (Rome) -->
-    <area shape="poly" coords="100,300,250,350,200,480,50,420" href="#rome">
+    <!-- 🔷 POLYGON 2 (Bottom Left Hexagon) -->
+    <area shape="poly"
+        coords="230,620, 500,620, 580,800, 500,980, 230,980, 150,800"
+        href="#rome">
 
-    <!-- Polygon 3 (Sydney) -->
-    <area shape="poly" coords="450,300,650,300,750,450,500,480" href="#sydney">
+    <!-- 🔷 POLYGON 3 (Right Hexagon) -->
+    <area shape="poly"
+        coords="1550,350, 1800,350, 1900,550, 1800,750, 1550,750, 1450,550"
+        href="#sydney">
 
 </map>
 
@@ -61,50 +76,50 @@
 <!-- PARIS -->
 <div id="paris" class="section">
     <h2>Paris, France</h2>
-    <p>I want to visit Paris because of its romantic atmosphere, beautiful architecture, and world-famous landmarks like the Eiffel Tower.</p>
+    <p>I want to visit Paris because of its romantic atmosphere, beautiful architecture, and iconic landmarks.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" width="300">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg">
 </div>
 
 
 <!-- TOKYO -->
 <div id="tokyo" class="section">
     <h2>Tokyo, Japan</h2>
-    <p>Tokyo fascinates me with its blend of modern technology and traditional culture, from neon skyscrapers to historic temples.</p>
+    <p>Tokyo fascinates me with its mix of advanced technology and deep-rooted traditions.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Tokyo_Tower_Wikimedia_Commons.jpg" width="300">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sensoji_Temple_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Tokyo_Tower_Wikimedia_Commons.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sensoji_Temple_Wikimedia_Commons.jpg">
 </div>
 
 
 <!-- NEW YORK -->
 <div id="newyork" class="section">
     <h2>New York City, USA</h2>
-    <p>I dream of visiting NYC to see Times Square, Broadway shows, and experience the fast-paced city life.</p>
+    <p>I dream of seeing Times Square, Broadway, and the Statue of Liberty in person.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Times_Square_Wikimedia_Commons.jpg" width="300">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Statue_of_Liberty_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Times_Square_Wikimedia_Commons.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Statue_of_Liberty_Wikimedia_Commons.jpg">
 </div>
 
 
 <!-- ROME -->
 <div id="rome" class="section">
     <h2>Rome, Italy</h2>
-    <p>Rome attracts me because of its ancient history, especially landmarks like the Colosseum and Vatican City.</p>
+    <p>Rome attracts me because of its ancient ruins, history, and incredible architecture.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" width="300">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/St_Peter%27s_Basilica_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/St_Peter%27s_Basilica_Wikimedia_Commons.jpg">
 </div>
 
 
 <!-- SYDNEY -->
 <div id="sydney" class="section">
     <h2>Sydney, Australia</h2>
-    <p>I want to visit Sydney for its beautiful beaches and the iconic Sydney Opera House.</p>
+    <p>I want to explore Sydney’s beaches and visit the famous Opera House.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Wikimedia_Commons.jpg" width="300">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bondi_Beach_Wikimedia_Commons.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Wikimedia_Commons.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bondi_Beach_Wikimedia_Commons.jpg">
 </div>
 
 </body>
