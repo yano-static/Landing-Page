@@ -1,0 +1,113 @@
+/* Styling derived from Archive Design System */
+
+.dream-page-content {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.page-main-title {
+  font-family: "Lora", serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-main-title span {
+  color: var(--accent);
+}
+
+.intro-text {
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+/* Map Interactivity */
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto 5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--col-brown);
+  box-shadow: var(--shadow-soft);
+}
+
+.interactive-collage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Individual Location Cards */
+.loc-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  text-align: left;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.loc-card h2 {
+  font-family: "Lora", serif;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.loc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.loc-layout p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.loc-layout img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* Bucket List Styling */
+.bucket-section {
+  margin-top: 5rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--col-brown);
+}
+
+.bucket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.bucket-box {
+  background: var(--bg-dark-card);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--accent);
+  transition: all 0.3s ease;
+}
+
+.bucket-box h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.bucket-box:hover {
+  border-style: solid;
+  transform: translateY(-5px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .loc-layout {
+    grid-template-columns: 1fr;
+  }
+}
