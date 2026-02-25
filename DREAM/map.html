@@ -1,126 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dream Places Image Map</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #111;
-            color: white;
-        }
-
-        h1 {
-            margin: 30px 0;
-        }
-
-        .collage {
-            display: block;
-            margin: auto;
-        }
-
-        .section {
-            padding: 80px 20px;
-            background-color: #222;
-            margin-top: 50px;
-        }
-
-        .section img {
-            width: 300px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yano · Dream Explorer</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="dream-page.css">
 </head>
-
 <body>
 
-<h1>🌍 My Dream Places to Visit</h1>
-<p>Click on a shape in the collage to explore!</p>
+  <header class="site-header">
+    <div class="logo">Yano · <span>Archive</span></div>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="#dream-map">Dream Map</a>
+      <a href="#bucket-list">Bucket List</a>
+    </nav>
+  </header>
 
-<!-- COLLAGE IMAGE -->
-<img src="Copy of Lifestyle Website in Dusty Pink Charcoal Light Pink Notes App Chic Style.png" usemap="#dreammap" width="2048" height="1152" class="collage">
+  <main class="dream-page-content">
+    <h1 class="page-main-title">Dream <span>Locations</span></h1>
+    <p class="intro-text">Explore the destinations I hope to reach through the interactive map below.</p>
 
-<map name="dreammap">
+    <div class="map-container" id="dream-map">
+      <img src="Copy of Lifestyle Website in Dusty Pink Charcoal Light Pink Notes App Chic Style.png" usemap="#dreammap" class="interactive-collage">
+      <map name="dreammap">
+          <area shape="circle" coords="1024,850,230" href="#paris" alt="Paris">
+          <area shape="rect" coords="720,170,1330,520" href="#tokyo" alt="Tokyo">
+          <area shape="poly" coords="230,140, 500,140, 580,320, 500,500, 230,500, 150,320" href="#newyork" alt="New York">
+          <area shape="poly" coords="230,620, 500,620, 580,800, 500,980, 230,980, 150,800" href="#santorini" alt="Santorini">
+          <area shape="poly" coords="1550,350, 1800,350, 1900,550, 1800,750, 1550,750, 1450,550" href="#bali" alt="Bali">
+      </map>
+    </div>
 
-    <!-- 🔵 CIRCLE (Bottom Center) -->
-    <area shape="circle" coords="1024,850,230" href="#paris">
+    <div class="location-details">
+      <section id="paris" class="loc-card">
+        <h2>🇫🇷 Paris, France</h2>
+        <div class="loc-layout">
+          <p>I’ve always wanted to visit Paris to experience its romantic atmosphere, art museums, and iconic architecture like the Eiffel Tower and the Louvre.</p>
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris Experience">
+        </div>
+      </section>
 
-    <!-- 🟦 RECTANGLE (Top Center) -->
-    <area shape="rect" coords="720,170,1330,520" href="#tokyo">
+      <section id="tokyo" class="loc-card">
+        <h2>🇯🇵 Tokyo, Japan</h2>
+        <div class="loc-layout">
+          <p>Tokyo fascinates me with its mix of traditional culture and futuristic technology. I’d love to experience cherry blossoms, anime culture, and delicious sushi.</p>
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf" alt="Tokyo Experience">
+        </div>
+      </section>
 
-    <!-- 🔷 POLYGON 1 (Top Left Hexagon) -->
-    <area shape="poly"
-        coords="230,140, 500,140, 580,320, 500,500, 230,500, 150,320"
-        href="#newyork">
+      <section id="newyork" class="loc-card">
+        <h2>🇺🇸 New York City, USA</h2>
+        <div class="loc-layout">
+          <p>I dream of visiting New York for its skyscrapers, Central Park, Broadway shows, and the vibrant energy of the "city that never sleeps".</p>
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" alt="NYC Experience">
+        </div>
+      </section>
 
-    <!-- 🔷 POLYGON 2 (Bottom Left Hexagon) -->
-    <area shape="poly"
-        coords="230,620, 500,620, 580,800, 500,980, 230,980, 150,800"
-        href="#rome">
+      <section id="santorini" class="loc-card">
+        <h2>🇬🇷 Santorini, Greece</h2>
+        <div class="loc-layout">
+          <p>I want to visit Santorini for its stunning sunsets, whitewashed buildings, and the breathtaking view of the Aegean Sea.</p>
+          <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff" alt="Santorini Experience">
+        </div>
+      </section>
 
-    <!-- 🔷 POLYGON 3 (Right Hexagon) -->
-    <area shape="poly"
-        coords="1550,350, 1800,350, 1900,550, 1800,750, 1550,750, 1450,550"
-        href="#sydney">
+      <section id="bali" class="loc-card">
+        <h2>🇮🇩 Bali, Indonesia</h2>
+        <div class="loc-layout">
+          <p>Bali attracts me with its beaches, spiritual temples, and peaceful vibe — the perfect place for relaxation and surfing.</p>
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Bali Experience">
+        </div>
+      </section>
+    </div>
 
-</map>
+    <section id="bucket-list" class="bucket-section">
+      <h1 class="page-main-title">Lifetime <span>Bucket List</span></h1>
+      <div class="bucket-grid">
+        <div class="bucket-box">
+          <h3>Academic Goals</h3>
+          <p>Complete psychology studies and pursue research in human behavior.</p>
+        </div>
+        <div class="bucket-box">
+          <h3>Tech & Design</h3>
+          <p>Develop a full-scale web application for the Hallowpoint project.</p>
+        </div>
+        <div class="bucket-box">
+          <h3>Creative Arts</h3>
+          <p>Host a gallery exhibition featuring original digital art pieces.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-<!-- PARIS -->
-<div id="paris" class="section">
-    <h2>Paris, France</h2>
-    <p>I want to visit Paris because of its romantic atmosphere, beautiful architecture, and iconic landmarks.</p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg">
-</div>
-
-
-<!-- TOKYO -->
-<div id="tokyo" class="section">
-    <h2>Tokyo, Japan</h2>
-    <p>Tokyo fascinates me with its mix of advanced technology and deep-rooted traditions.</p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Tokyo_Tower_Wikimedia_Commons.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sensoji_Temple_Wikimedia_Commons.jpg">
-</div>
-
-
-<!-- NEW YORK -->
-<div id="newyork" class="section">
-    <h2>New York City, USA</h2>
-    <p>I dream of seeing Times Square, Broadway, and the Statue of Liberty in person.</p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Times_Square_Wikimedia_Commons.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Statue_of_Liberty_Wikimedia_Commons.jpg">
-</div>
-
-
-<!-- ROME -->
-<div id="rome" class="section">
-    <h2>Rome, Italy</h2>
-    <p>Rome attracts me because of its ancient ruins, history, and incredible architecture.</p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/St_Peter%27s_Basilica_Wikimedia_Commons.jpg">
-</div>
-
-
-<!-- SYDNEY -->
-<div id="sydney" class="section">
-    <h2>Sydney, Australia</h2>
-    <p>I want to explore Sydney’s beaches and visit the famous Opera House.</p>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Wikimedia_Commons.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bondi_Beach_Wikimedia_Commons.jpg">
-</div>
+  <footer class="site-footer">
+    <p>&copy; 2026 Yano · Archive. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
