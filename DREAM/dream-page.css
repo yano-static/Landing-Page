@@ -1,113 +1,119 @@
-/* Styling derived from Archive Design System */
+/* Shared Styles for Dream Places & Bucket List
+   Integrates with Archive Design System (style.css)
+*/
 
-.dream-page-content {
-  text-align: center;
-  padding-top: 2rem;
+/* --- General Page Layout --- */
+.post {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-.page-main-title {
-  font-family: "Lora", serif;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.post-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.page-main-title span {
-  color: var(--accent);
+.post-title {
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.intro-text {
-  color: var(--text-muted);
-  margin-bottom: 3rem;
+.post-title span {
+    color: var(--accent);
 }
 
-/* Map Interactivity */
+.post-excerpt {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+/* --- Map Interactivity (map.html) --- */
 .map-container {
-  max-width: 1000px;
-  margin: 0 auto 5rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 2px solid var(--col-brown);
-  box-shadow: var(--shadow-soft);
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 2px solid var(--col-brown);
+    box-shadow: var(--shadow-soft);
 }
 
 .interactive-collage {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Individual Location Cards */
-.loc-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  margin-bottom: 3rem;
-  padding: 2.5rem;
-  text-align: left;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+/* Location Details Layout */
+.post-section div {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.loc-card h2 {
-  font-family: "Lora", serif;
-  color: var(--accent-blue);
-  margin-bottom: 1.5rem;
+.post-section div:hover {
+    transform: scale(1.01);
 }
 
-.loc-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+.post-section h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-family: "Lora", serif;
 }
 
-.loc-layout p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-main);
-}
-
-.loc-layout img {
-  width: 100%;
-  border-radius: var(--radius-md);
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-/* Bucket List Styling */
-.bucket-section {
-  margin-top: 5rem;
-  padding: 4rem 0;
-  border-top: 1px solid var(--col-brown);
-}
-
+/* --- Bucket List Grid (bucketlist.html) --- */
 .bucket-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .bucket-box {
-  background: var(--bg-dark-card);
-  padding: 2rem;
-  border-radius: var(--radius-md);
-  border: 1px dashed var(--accent);
-  transition: all 0.3s ease;
+    background: var(--bg-dark-card); /* Slightly darker for contrast */
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--accent);
+    transition: all 0.3s ease;
+    text-align: left;
 }
 
 .bucket-box h3 {
-  color: var(--accent);
-  margin-bottom: 1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+}
+
+.bucket-box p {
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
 .bucket-box:hover {
-  border-style: solid;
-  transform: translateY(-5px);
+    border-style: solid;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: var(--bg-card);
 }
 
-/* Mobile Responsiveness */
+/* --- Responsive Behavior --- */
 @media (max-width: 768px) {
-  .loc-layout {
-    grid-template-columns: 1fr;
-  }
+    .post-title {
+        font-size: 2.5rem;
+    }
+    
+    .bucket-grid {
+        grid-template-columns: 1fr;
+    }
 }
