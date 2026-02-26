@@ -6,6 +6,10 @@
   <title>Yano · Dream Explorer</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
+  <style>
+    area { cursor: pointer; }
+    .interactive-collage { width: 100%; height: auto; display: block; }
+  </style>
 </head>
 <body>
 
@@ -24,13 +28,14 @@
       <h1 class="post-title">Dream <span>Places</span></h1>
       
       <div class="map-container" id="dream-map">
-        <img src="Copy of Lifestyle Website in Dusty Pink Charcoal Light Pink Notes App Chic Style.png" usemap="#dreammap" class="interactive-collage">
+        <img src="Screenshot 2026-02-26 at 11.55.56 AM.jpg" usemap="#dreammap" class="interactive-collage">
+        
         <map name="dreammap">
-            <area shape="rect" coords="720,170,1330,520" href="#tokyo" alt="Tokyo">
-            <area shape="circle" coords="1024,850,230" href="#paris" alt="Paris">
-            <area shape="poly" coords="230,140, 500,140, 580,320, 500,500, 230,500, 150,320" href="#newyork" alt="New York">
-            <area shape="poly" coords="230,620, 500,620, 580,800, 500,980, 230,980, 150,800" href="#santorini" alt="Santorini">
-            <area shape="poly" coords="1550,350, 1800,350, 1900,550, 1800,750, 1550,750, 1450,550" href="#bali" alt="Bali">
+          <area shape="poly" coords="248,140, 275,142, 305,175, 290,215, 250,210, 240,170" href="#newyork" alt="New York" title="New York City, USA">
+          <area shape="rect" coords="8,390,85,785" href="#bali" alt="Bali" title="Bali, Indonesia">
+          <area shape="poly" coords="313,640, 313,755, 370,765, 395,730, 395,670, 370,640" href="#paris" alt="Paris" title="Paris, France">
+          <area shape="poly" coords="485,760, 520,740, 565,760, 565,840, 530,875, 485,840" href="#tokyo" alt="Tokyo" title="Tokyo, Japan">
+          <area shape="circle" coords="710,650, 65" href="#santorini" alt="Santorini" title="Santorini, Greece">
         </map>
       </div>
 
@@ -62,5 +67,10 @@
   <footer class="site-footer">
     <p>&copy; 2026 Yano · Archive</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    imageMapResize();
+  </script>
 </body>
 </html>
