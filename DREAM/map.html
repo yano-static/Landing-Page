@@ -10,16 +10,17 @@
     /* Basic interactive setup */
     area { cursor: pointer; }
 
-    /* Keep the map at its natural size so coords match */
+    .map-container {
+      max-width: 578px;
+      margin: 0 auto 5rem;
+      overflow: auto;
+    }
+
     .interactive-collage {
       display: block;
       width: 578px;
       height: 768px;
       margin: 0 auto;
-    }
-
-    .map-container {
-      overflow: auto; /* so it can scroll on small screens instead of squashing the image */
     }
 
     /* Footer/Navigation */
@@ -57,25 +58,34 @@
              alt="Dream Places Map">
 
         <map name="image-map">
+          <!-- NYC -->
           <area target="_self" alt="Eagles" title="New York City, USA"
-                href="place1.html" coords="438,532,494,577" shape="rect">
+                href="place1.html"
+                coords="185,532,209,577"
+                shape="rect">
 
+          <!-- Tokyo -->
           <area target="_self" alt="Guitar" title="Tokyo, Japan"
                 href="place2.html"
-                coords="39,341,45,362,51,376,54,393,53,412,54,432,69,509,87,508,93,491,100,508,100,515,94,533,104,552,113,581,100,597,80,601,45,604,34,586,27,566,35,531,16,514,13,490,23,470,42,490,49,491,39,457,36,424,31,402,24,391,21,371,22,353"
+                coords="17,341,19,362,22,376,24,393,23,412,24,432,29,509,37,508,39,491,42,508,42,515,40,533,44,552,50,581,42,597,34,601,19,604,14,586,11,566,15,531,7,514,6,490,10,470,18,490,21,491,17,457,16,424,13,402,10,391,9,371,9,353"
                 shape="poly">
 
+          <!-- Miyagi -->
           <area target="_self" alt="Volleyball Cat" title="Miyagi, Japan"
-                href="place5.html" coords="965,509,79" shape="circle">
+                href="place5.html"
+                coords="408,509,34"
+                shape="circle">
 
+          <!-- Switzerland -->
           <area target="_self" alt="Cat" title="Mittelland, Switzerland"
                 href="place4.html"
-                coords="352,113,366,113,381,118,390,124,386,132,401,136,414,143,411,154,393,154,381,160,370,170,354,164,345,154,362,142,361,129"
+                coords="149,113,155,113,178,118,179,124,179,132,186,136,191,143,190,154,183,154,178,160,171,170,150,164,143,154,154,142,154,129"
                 shape="poly">
 
+          <!-- UK -->
           <area target="_self" alt="UK Flag" title="United Kingdom"
                 href="place3.html"
-                coords="674,607,685,602,707,586,726,586,749,595,761,604,765,625,767,635,765,649,759,655,748,655,736,664,726,676,718,680,709,673,694,670,671,666,677,656,682,642,669,630,667,618"
+                coords="285,607,290,602,299,586,307,586,317,595,322,604,324,625,325,635,324,649,321,655,316,655,311,664,307,676,303,680,299,673,292,670,284,666,286,656,289,642,287,630,286,618"
                 shape="poly">
         </map>
       </div>
