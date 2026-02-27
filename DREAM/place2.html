@@ -2,36 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tokyo · Dream Place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo | Yano Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="logo">Yano · <span>Archive</span></div>
-  <nav class="nav">
+  <a href="../index.html" class="logo">Yano · <span>Archive</span></a>
+  <nav class="nav" aria-label="Main Navigation">
     <a href="../index.html">Home</a>
     <a href="dream.html">Back to Map</a>
   </nav>
 </header>
 
-<main class="place-page">
-  <h1>Tokyo, Japan</h1>
-  <img src="tokyo.jpg" alt="Tokyo Japan">
+<main>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-label">Dream Destinations</div>
+      <h1 class="post-title">Tokyo, Japan</h1>
+    </header>
 
-  <p>
-    Tokyo is a perfect mix of tradition and technology.
-    I want to explore Shibuya Crossing, anime districts,
-    and experience authentic Japanese culture.
-  </p>
+    <div class="hero-photo">
+      <figure class="photo-card">
+        <img src="tokyo.jpg" alt="Neon lights reflecting on the streets of Tokyo">
+      </figure>
+    </div>
 
-  <ul>
-    <li>Visit Shibuya Crossing</li>
-    <li>Explore Akihabara</li>
-    <li>Try authentic ramen</li>
-    <li>See cherry blossoms</li>
-  </ul>
+    <div class="post-excerpt">
+      <p>
+        Tokyo represents a perfect harmony between <strong>ancient tradition</strong> 
+        and <strong>futuristic technology</strong>. From the neon glow of the anime 
+        districts to the quiet serenity of historic temples, it is a city of endless discovery.
+      </p>
+
+      <section class="post-section">
+        <h3>The Tokyo Experience</h3>
+        <ul class="checklist">
+          <li>Cross the famous <strong>Shibuya Crossing</strong></li>
+          <li>Explore the tech-culture of <strong>Akihabara</strong></li>
+          <li>Indulge in authentic local ramen</li>
+          <li>Witness the <strong>Cherry Blossoms</strong> in Ueno Park</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="hero-actions" style="margin-top: 2rem; justify-content: center;">
+      <a href="dream.html" class="btn-primary">Back to Map</a>
+      <a href="#" class="btn-secondary">Gallery View</a>
+    </div>
+  </article>
 </main>
 
 <footer class="site-footer">
