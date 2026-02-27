@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="dream-page.css">
   <style>
     area { cursor: pointer; }
-    .interactive-collage {display: block; }
+    .interactive-collage { display: block; max-width: 100%; height: auto; }
+    
+    /* Optional: Add a subtle glow when hovering over interactive areas */
+    .map-container img { transition: opacity 0.3s; }
+    .map-container img:hover { opacity: 0.95; }
   </style>
 </head>
 <body>
@@ -26,39 +30,21 @@
     <section class="post">
       <div class="post-label">Travel Goals</div>
       <h1 class="post-title">Dream <span>Places</span></h1>
+      
       <div class="map-container" id="dream-map">
-        <img src="map.png"
-     usemap="#dreammap"
-     width="2048"
-     height="1151"
-     class="interactive-collage">
-       <map name="dreammap">
-  <area shape="poly"
-        coords="243,143,276,143,303,181,287,218,252,217,237,185"
-        href="place1.html"
-        alt="USA"
-        title="New York City, USA">
-  <area shape="rect"
-        coords="10,480,120,750"
-        href="place2.html"
-        alt="Japan"
-        title="Tokyo, Japan">
-  <area shape="poly"
-        coords="316,688,363,688,363,732,316,732"
-        href="place3.html"
-        alt="United Kingdom"
-        title="United Kingdom">
-  <area shape="poly"
-        coords="485,745,555,745,560,815,525,845,480,820"
-        href="place4.html"
-        alt="Switzerland"
-        title="Mittelland, Switzerland">
-  <area shape="circle"
-        coords="720,620,70"
-        href="place5.html"
-        alt="Sendai Gymnasium"
-        title="Miyagi, Japan">
-</map>
+        <img src="map.png" usemap="#dreammap" width="1366" height="768" class="interactive-collage" alt="Dream Places Map">
+
+        <map name="dreammap">
+          <area shape="circle" coords="965,492,69" href="place5.html" alt="Volleyball Cat" title="Sendai Gymnasium, Miyagi">
+          
+          <area shape="rect" coords="437,532,494,576" href="place1.html" alt="Eagles" title="New York City, USA">
+          
+          <area shape="poly" coords="117,593,98,485,69,498,48,343,18,347,42,477,11,460,33,606" href="place2.html" alt="Guitar" title="Tokyo, Japan">
+          
+          <area shape="poly" coords="669,619,716,570,760,601,776,650,741,661,728,674,711,681,693,671,676,668,667,665" href="place3.html" alt="UK Flag" title="United Kingdom">
+          
+          <area shape="poly" coords="354,112,385,120,389,133,402,136,413,144,414,151,398,153,390,155,383,161,376,167,372,174,361,168,351,163,344,155" href="place4.html" alt="Cat" title="Mittelland, Switzerland">
+        </map>
       </div>
     </section>
   </main>
