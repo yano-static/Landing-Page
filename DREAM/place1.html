@@ -2,37 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New York City · Dream Place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City · Yano Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="logo">Yano · <span>Archive</span></div>
-  <nav class="nav">
+  <a href="../index.html" class="logo">Yano · <span>Archive</span></a>
+  <nav class="nav" aria-label="Main Navigation">
     <a href="../index.html">Home</a>
     <a href="dream.html">Back to Map</a>
   </nav>
 </header>
 
-<main class="place-page">
-  <h1>New York City, USA</h1>
-  <img src="nyc.jpg" alt="New York City">
+<main>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-label">Dream Destinations</div>
+      <h1 class="post-title">New York City, USA</h1>
+    </header>
 
-  <p>
-    One of my biggest dream destinations is 
-    <strong>New York City</strong>, located in the 
-    United States. I want to experience Times Square, 
-    Central Park, and see the Statue of Liberty in person.
-  </p>
+    <div class="hero-photo">
+      <figure class="photo-card">
+        <img src="nyc.jpg" alt="The Manhattan skyline at dusk">
+      </figure>
+    </div>
 
-  <ul>
-    <li>Visit Times Square</li>
-    <li>Walk through Central Park</li>
-    <li>See the Statue of Liberty</li>
-    <li>Explore Manhattan skyline</li>
-  </ul>
+    <div class="post-excerpt">
+      <p>
+        One of my biggest dream destinations is <strong>New York City</strong>. 
+        I want to experience the electric energy of Times Square, the serene 
+        landscapes of Central Park, and stand before the Statue of Liberty.
+      </p>
+
+      <section class="post-section">
+        <h3>Travel Bucket List</h3>
+        <ul class="checklist">
+          <li>Visit Times Square</li>
+          <li>Walk through Central Park</li>
+          <li>See the Statue of Liberty</li>
+          <li>Explore Manhattan skyline</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="hero-actions" style="margin-top: 2rem; justify-content: center;">
+      <a href="dream.html" class="btn-primary">Explore More</a>
+      <a href="#" class="btn-secondary">View Gallery</a>
+    </div>
+  </article>
 </main>
 
 <footer class="site-footer">
