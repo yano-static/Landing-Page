@@ -11,15 +11,15 @@
     area { cursor: pointer; }
 
     .map-container {
-      max-width: 578px;
+      max-width: 900px;
       margin: 0 auto 5rem;
       overflow: auto;
     }
 
     .interactive-collage {
       display: block;
-      width: 578px;
-      height: 768px;
+      width: 900px;
+      height: 506px;
       margin: 0 auto;
     }
 
@@ -52,40 +52,52 @@
       <div class="map-container" id="dream-map">
         <img src="map.png"
              usemap="#image-map"
-             width="578"
-             height="768"
+             width="900"
+             height="506"
              class="interactive-collage"
              alt="Dream Places Map">
 
         <map name="image-map">
-          <!-- NYC -->
+          <!-- NYC (rect) -->
           <area target="_self" alt="Eagles" title="New York City, USA"
                 href="place1.html"
-                coords="185,532,209,577"
+                coords="289,351,326,374"
                 shape="rect">
 
-          <!-- Tokyo -->
+          <!-- Tokyo (poly) -->
           <area target="_self" alt="Guitar" title="Tokyo, Japan"
                 href="place2.html"
-                coords="17,341,19,362,22,376,24,393,23,412,24,432,29,509,37,508,39,491,42,508,42,515,40,533,44,552,50,581,42,597,34,601,19,604,14,586,11,566,15,531,7,514,6,490,10,470,18,490,21,491,17,457,16,424,13,402,10,391,9,371,9,353"
+                coords="
+                  26,225,28,239,31,248,34,259,33,272,34,285,
+                  40,334,48,333,51,322,55,333,55,338,52,350,
+                  57,364,63,383,57,393,49,396,28,398,23,386,
+                  20,373,25,352,12,338,11,323,16,308,27,323,
+                  29,324,26,301,25,279,21,265,18,258,16,245,16,233"
                 shape="poly">
 
-          <!-- Miyagi -->
+          <!-- Miyagi (circle) -->
           <area target="_self" alt="Volleyball Cat" title="Miyagi, Japan"
                 href="place5.html"
-                coords="408,509,34"
+                coords="465,334,52"
                 shape="circle">
 
-          <!-- Switzerland -->
+          <!-- Switzerland (poly) -->
           <area target="_self" alt="Cat" title="Mittelland, Switzerland"
                 href="place4.html"
-                coords="149,113,155,113,178,118,179,124,179,132,186,136,191,143,190,154,183,154,178,160,171,170,150,164,143,154,154,142,154,129"
+                coords="
+                  219,75,224,75,238,79,244,84,241,90,
+                  250,93,259,98,257,106,246,106,238,110,
+                  232,117,219,113,213,106,223,98,223,89"
                 shape="poly">
 
-          <!-- UK -->
+          <!-- UK (poly) -->
           <area target="_self" alt="UK Flag" title="United Kingdom"
                 href="place3.html"
-                coords="285,607,290,602,299,586,307,586,317,595,322,604,324,625,325,635,324,649,321,655,316,655,311,664,307,676,303,680,299,673,292,670,284,666,286,656,289,642,287,630,286,618"
+                coords="
+                  437,401,443,397,455,387,467,387,482,393,
+                  491,400,494,415,496,421,494,431,491,435,
+                  485,435,479,441,474,450,470,453,465,449,
+                  458,446,446,444,448,437,452,428,450,420,449,411"
                 shape="poly">
         </map>
       </div>
