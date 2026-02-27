@@ -7,10 +7,18 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
   <style>
+    /* Basic interactive setup */
     area { cursor: pointer; }
-    .interactive-collage { display: block; max-width: 100%; height: auto; }
-    .map-container img { transition: opacity 0.3s; }
-    .map-container img:hover { opacity: 0.95; }
+    .interactive-collage { 
+        display: block; 
+        max-width: 100%; 
+        width: 1366px; 
+        height: auto; 
+        margin: 0 auto;
+    }
+    
+    /* Footer/Navigation */
+    .go-top { display: block; text-align: center; margin: 20px 0; color: var(--text-main); text-decoration: none; }
   </style>
 </head>
 <body>
@@ -30,20 +38,22 @@
       <h1 class="post-title">Dream <span>Places</span></h1>
       
       <div class="map-container" id="dream-map">
-        <img src="map.png" usemap="#dreammap" width="1366" height="768" class="interactive-collage" alt="Dream Places Map">
+        <img src="map.png" usemap="#image-map" width="1366" height="768" class="interactive-collage" alt="Dream Places Map">
 
-        <map name="dreammap">
-          <area shape="circle" coords="965,492,69" href="place5.html" alt="Volleyball Cat" title="Sendai Gymnasium, Miyagi">
-          
-          <area shape="rect" coords="437,532,494,576" href="place1.html" alt="Eagles" title="New York City, USA">
-          
-          <area shape="poly" coords="117,593,98,485,69,498,48,343,18,347,42,477,11,460,33,606" href="place2.html" alt="Guitar" title="Tokyo, Japan">
-          
-          <area shape="poly" coords="669,619,716,570,760,601,776,650,741,661,728,674,711,681,693,671,676,668,667,665" href="place3.html" alt="UK Flag" title="United Kingdom">
-          
-          <area shape="poly" coords="354,112,385,120,389,133,402,136,413,144,414,151,398,153,390,155,383,161,376,167,372,174,361,168,351,163,344,155" href="place4.html" alt="Cat" title="Mittelland, Switzerland">
+        <map name="image-map">
+            <area target="_self" alt="Eagles" title="New York City, USA" href="place1.html" coords="438,532,494,577" shape="rect">
+            
+            <area target="_self" alt="Guitar" title="Tokyo, Japan" href="place2.html" coords="39,341,45,362,51,376,54,393,53,412,54,432,69,509,87,508,93,491,100,508,100,515,94,533,104,552,113,581,100,597,80,601,45,604,34,586,27,566,35,531,16,514,13,490,23,470,42,490,49,491,39,457,36,424,31,402,24,391,21,371,22,353" shape="poly">
+            
+            <area target="_self" alt="Volleyball Cat" title="Miyagi, Japan" href="place5.html" coords="965,509,79" shape="circle">
+            
+            <area target="_self" alt="Cat" title="Mittelland, Switzerland" href="place4.html" coords="352,113,366,113,381,118,390,124,386,132,401,136,414,143,411,154,393,154,381,160,370,170,354,164,345,154,362,142,361,129" shape="poly">
+            
+            <area target="_self" alt="UK Flag" title="United Kingdom" href="place3.html" coords="674,607,685,602,707,586,726,586,749,595,761,604,765,625,767,635,765,649,759,655,748,655,736,664,726,676,718,680,709,673,694,670,671,666,677,656,682,642,669,630,667,618" shape="poly">
         </map>
       </div>
+      
+      <a href="#top" class="go-top">Go to top</a>
     </section>
   </main>
 
