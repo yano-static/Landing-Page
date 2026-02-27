@@ -2,35 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Switzerland · Dream Place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland | Yano Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="logo">Yano · <span>Archive</span></div>
-  <nav class="nav">
+  <a href="../index.html" class="logo">Yano · <span>Archive</span></a>
+  <nav class="nav" aria-label="Main Navigation">
     <a href="../index.html">Home</a>
     <a href="dream.html">Back to Map</a>
   </nav>
 </header>
 
-<main class="place-page">
-  <h1>Mittelland, Switzerland</h1>
-  <img src="switzerland.jpg" alt="Switzerland">
+<main>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-label">Dream Destinations</div>
+      <h1 class="post-title">Mittelland, Switzerland</h1>
+    </header>
 
-  <p>
-    Switzerland is known for its breathtaking mountains,
-    peaceful landscapes, and beautiful lakes.
-  </p>
+    <div class="hero-photo">
+      <figure class="photo-card">
+        <img src="switzerland.jpg" alt="Snowy peaks and turquoise lakes of the Swiss Alps">
+      </figure>
+    </div>
 
-  <ul>
-    <li>See the Swiss Alps</li>
-    <li>Experience scenic train rides</li>
-    <li>Visit charming villages</li>
-    <li>Enjoy snowy landscapes</li>
-  </ul>
+    <div class="post-excerpt">
+      <p>
+        Switzerland is world-renowned for its <strong>breathtaking mountains</strong>, 
+        peaceful alpine landscapes, and crystal-clear lakes. It represents the 
+        ultimate escape into nature’s most pristine and quiet corners.
+      </p>
+
+      <section class="post-section">
+        <h3>Alpine Wonders</h3>
+        <ul class="checklist">
+          <li>Witness the majesty of the <strong>Swiss Alps</strong></li>
+          <li>Experience world-famous <strong>scenic train rides</strong></li>
+          <li>Visit the quiet, <strong>charming villages</strong> of the valley</li>
+          <li>Enjoy the serenity of <strong>snowy landscapes</strong></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="hero-actions" style="margin-top: 2rem; justify-content: center;">
+      <a href="dream.html" class="btn-primary">Back to Map</a>
+      <a href="#" class="btn-secondary">View Gallery</a>
+    </div>
+  </article>
 </main>
 
 <footer class="site-footer">
