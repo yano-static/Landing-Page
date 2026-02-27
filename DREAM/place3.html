@@ -2,35 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>United Kingdom · Dream Place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Kingdom | Yano Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="dream-page.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="logo">Yano · <span>Archive</span></div>
-  <nav class="nav">
+  <a href="../index.html" class="logo">Yano · <span>Archive</span></a>
+  <nav class="nav" aria-label="Main Navigation">
     <a href="../index.html">Home</a>
     <a href="dream.html">Back to Map</a>
   </nav>
 </header>
 
-<main class="place-page">
-  <h1>United Kingdom</h1>
-  <img src="uk.jpg" alt="United Kingdom">
+<main>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-label">Dream Destinations</div>
+      <h1 class="post-title">United Kingdom</h1>
+    </header>
 
-  <p>
-    The UK fascinates me because of its rich history,
-    iconic landmarks, and royal heritage.
-  </p>
+    <div class="hero-photo">
+      <figure class="photo-card">
+        <img src="uk.jpg" alt="The Houses of Parliament and Big Ben in London">
+      </figure>
+    </div>
 
-  <ul>
-    <li>Visit London</li>
-    <li>See Big Ben</li>
-    <li>Explore historical castles</li>
-    <li>Experience British culture</li>
-  </ul>
+    <div class="post-excerpt">
+      <p>
+        The <strong>United Kingdom</strong> fascinates me because of its profound history, 
+        iconic architectural landmarks, and royal heritage. It is a place where 
+        every cobblestone street seems to tell a story of centuries past.
+      </p>
+
+      <section class="post-section">
+        <h3>Historical Heritage</h3>
+        <ul class="checklist">
+          <li>Visit the bustling streets of <strong>London</strong></li>
+          <li>See <strong>Big Ben</strong> and the Palace of Westminster</li>
+          <li>Explore the mist-shrouded <strong>historical castles</strong></li>
+          <li>Experience the unique depth of <strong>British culture</strong></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="hero-actions" style="margin-top: 2rem; justify-content: center;">
+      <a href="dream.html" class="btn-primary">Back to Map</a>
+      <a href="#" class="btn-secondary">View Gallery</a>
+    </div>
+  </article>
 </main>
 
 <footer class="site-footer">
