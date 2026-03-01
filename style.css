@@ -402,10 +402,10 @@ main {
 .post {
   max-width: 1450px;
   margin: 140px auto 4rem;
-  padding: 5rem;
+  padding: 2rem;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(244, 247, 190, 0.15);
+  border: 2px solid rgba(244, 247, 190, 0.15);
   color: var(--text-muted);
 }
 
