@@ -72,7 +72,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Archive palette applied via variables */
 body {
   margin: 0;
   padding: 0;
@@ -124,7 +123,6 @@ img {
   transition: all 0.3s ease;
 }
 
-/* Elegant Underline Animation */
 .nav a::after {
   content: '';
   position: absolute;
@@ -267,7 +265,6 @@ main {
   font-size: 0.95rem;
 }
 
-/* Splash Page Specific */
 [id] {
   scroll-margin-top: 160px;
 }
@@ -380,10 +377,10 @@ main {
 .post {
   max-width: 1450px;
   margin: 140px auto 4rem;
-  padding: 5rem;
+  padding: 2rem;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(244, 247, 190, 0.15);
+  border: 2px solid rgba(244, 247, 190, 0.15);
   color: var(--text-muted);
 }
 
@@ -394,7 +391,6 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Image Placeholder Styling */
 .image-container {
   position: relative;
   width: 100%;
@@ -411,7 +407,6 @@ main {
   transition: transform 0.5s ease;
 }
 
-/* Hover Overlay Text */
 .image-hover-title {
   position: absolute;
   top: 0;
@@ -438,7 +433,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Link styling inside bio paragraphs */
 .bio a {
   color: var(--accent);
   text-decoration: none;
@@ -451,7 +445,6 @@ main {
   border-bottom-color: var(--col-light);
 }
 
-/* Bio text readability */
 .bio {
   font-size: 1.15rem;
   line-height: 1.9;
@@ -461,7 +454,7 @@ main {
 
 .bio-toc {
   position: sticky;
-  top: 95px; /* Aligns under your fixed header */
+  top: 95px;  
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -583,7 +576,6 @@ h2[id] {
   scroll-margin-top: 200px;
 }
 
-/* Blog Page Hero Layout */
 .blog-hero {
   text-align: center;
   padding: 8rem 2rem 4rem;
@@ -603,7 +595,6 @@ h2[id] {
   font-size: 1.1rem;
 }
 
-/* The Grid of Cards (Matching the Archive reference) */
 .blog-grid {
   display: flex;
   justify-content: center;
